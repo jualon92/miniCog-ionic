@@ -1,0 +1,7 @@
+{
+  "name": "miniCogTest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
