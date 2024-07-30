@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Clock Drawing</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+ <ion-content> 
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Clock Drawing</ion-title>
+    </ion-toolbar>
+  </ion-header>
+ 
+  
+
+  
+ 
+    <div class="">
+     
+  
+      <p>Give the person a blank sheet of paper and a pen or pencil.</p>
+
+      <p>  It is acceptable to provide a sheet of paper with the circle already drawn for the person. </p>
+       
+      <p>Say: “Next, I want you to draw a clock for me. First, put in all of the numbers where they go.”</p>
+      
+      <p>When that is completed, say: “Now, set the hands to 10 past 11.”</p>
+      
+
+      <p-messages severity="info">
+        <ng-template pTemplate>
+             <div class="ml-2">Repeat instructions as needed as this is not a memory test.</div>
+        </ng-template>
+    </p-messages>
+
+
+
+    
+    <p-messages severity="warn">
+      <ng-template pTemplate>
+           <div class="ml-2">Move to Step 3 if the clock is not complete within three minutes.</div>
+      </ng-template>
+  </p-messages>
+
+     
+      
+    </div>
+
+  <ion-button [routerLink]="['/scoring']">Scoring</ion-button> 
+ 
+</ion-content>
+ 
+ 
+
+      
+  

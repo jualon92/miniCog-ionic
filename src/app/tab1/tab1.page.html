@@ -1,17 +1,249 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<p-stepper orientation="vertical">
+  <p-stepperPanel header="Three Word Registration">
+      <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
+          <div class="flex flex-column h-12rem">
+              <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+                <p>Look directly at the person and say: <br> “Please listen carefully. I am going to say three words that I want you to repeat back to me now and try to remember. 
+                  
+                  <br>  
+                </p>
+                  <h2> The words are</h2> 
+               <ul>
+                <li>              Banana</li>
+                <li>       Sunrise</li>
+                  <li>        Chair</li>
+               </ul>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+
+                <p>After you have said all three words, ask the person to repeat them back to you. </p>
+                <p>Repeat the words if necessary, but do not provide any additional information or cues.</p>
+
+
+ 
+                <p-messages severity="warn">
+                  <ng-template pTemplate>
+                       <div class="ml-2">If the person is unable to repeat the words after three attempts, move on to Step 2 (clock drawing)..</div>
+                  </ng-template>
+              </p-messages>
+ 
+
+   
+
+              </div>
+          </div>
+          <div class="flex py-4">
+              <p-button label="Next" (onClick)="nextCallback.emit()" />
+          </div
+      ></ng-template>
+  </p-stepperPanel>
+  <p-stepperPanel header="Clock Drawing">
+      <ng-template pTemplate="content" let-prevCallback="prevCallback" let-nextCallback="nextCallback" let-index="index">
+          <div class="flex flex-column h-12rem">
+              <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+               
+               
+         
+            
+                <p>Give the person a blank sheet of paper and a pen or pencil.</p>
+
+                <p>  It is acceptable to provide a sheet of paper with the circle already drawn for the person. </p>
+                 
+                <p>Say: “Next, I want you to draw a clock for me. First, put in all of the numbers where they go.”</p>
+                
+                <p>When that is completed, say: “Now, set the hands to 10 past 11.”</p>
+                
+
+                <p-messages severity="info">
+                  <ng-template pTemplate>
+                       <div class="ml-2">Repeat instructions as needed as this is not a memory test.</div>
+                  </ng-template>
+              </p-messages>
+ 
+
+
+              
+              <p-messages severity="warn">
+                <ng-template pTemplate>
+                     <div class="ml-2">Move to Step 3 if the clock is not complete within three minutes.</div>
+                </ng-template>
+            </p-messages>
+
+               
+                
+              </div>
+          </div>
+          <div class="flex py-4 gap-2"> 
+              <p-button label="Next" (onClick)="nextCallback.emit()" />
+          </div>
+      </ng-template>
+  </p-stepperPanel>
+  <p-stepperPanel header="Ask person to recall the 3 words.">
+      <ng-template pTemplate="content" let-prevCallback="prevCallback" let-nextCallback="nextCallback"  let-index="index">
+          <div class="flex flex-column h-12rem">
+              <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+                <ol>
+                  <li>   You will be asking the person to recall the set of 3 words you gave them at the beginning of the test. </li>
+                    <li>   Say, “What were the three words I asked you to remember?” </li>
+                  
+                  <li>  Write the words the person says in the spaces below: </li>
+              </ol>
+              </div>
+
+            
+                <ion-grid>
+                  <ion-row class="ion-align-items-start ion-justify-content-start">
+                    <ion-col size="12" class="ion-margin-bottom">
+                      <ion-item>
+                        <ion-input  labelPlacement="stacked"  label="first word"  type="text" [(ngModel)]="firstWordGuest"></ion-input>
+                      </ion-item>
+                    </ion-col>
+                    <ion-col size="12" class="ion-margin-bottom">
+                      <ion-item>
+                        <ion-input  labelPlacement="stacked"  label="second word"  type="text" [(ngModel)]="secondWordGuest"></ion-input>
+                      </ion-item>
+                    </ion-col>
+                    <ion-col size="12" class="ion-margin-bottom">
+                      <ion-item>
+                        <ion-input  labelPlacement="stacked"  label="third word" type="text" [(ngModel)]="thirdWordGuest"></ion-input>
+                      </ion-item>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              
+
+              <p-messages severity="warn">
+                <ng-template pTemplate>
+                     <div class="ml-2">   Administer this portion of the test even if the person did not accurately repeat the 3 words earlier in Step 2. 
+                    </div>
+                </ng-template>
+            </p-messages>
+
+            
+             
+          </div>
+          <div class="flex py-4 gap-2"> 
+            <p-button label="Next" (onClick)="nextCallback.emit()" />
+        </div>
+      </ng-template>
+  </p-stepperPanel>
+  <p-stepperPanel header="Scoring recall">
+    <ng-template pTemplate="content" let-prevCallback="prevCallback" let-nextCallback="nextCallback"  let-index="index">
+        <div class="flex flex-column h-12rem">
+         
+          <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+             
+             
+      
+          <!--   <p-inputNumber 
+            [(ngModel)]="value1" 
+            [style]="{'width': '2rem'}" 
+            [showButtons]="true"  
+             
+            max="3"
+            min="0"
+            /> -->
+<p>Score 1 point for each word spontaneously recalled without cueing.</p>
+ 
+<div style="display: flex; justify-content: flex-start; gap:4em">
+  <div>
+   
+      <p>Word list picked:</p>
+      <ol>
+          <li>Banana</li>
+          <li>Sunrise</li>
+          <li>Chair</li>
+      </ol>
+  </div>
+  <div>
+      <p>Person answer:</p>
+      <ol>
+          <li>{{firstWordGuest}}</li>
+          <li>{{secondWordGuest}}</li>
+          <li>{{thirdWordGuest}}</li>
+      </ol>
+  </div>
+ 
+
+</div>
+ 
+ 
+ 
+ 
+
+            </div>
+        </div>
+        <div class="flex py-4 gap-2"> 
+          <p-button label="Next" (onClick)="nextCallback.emit()" />
+      </div>
+    </ng-template>
+</p-stepperPanel>
+<p-stepperPanel header="Scoring the clock">
+  
+  <ng-template pTemplate="content" let-prevCallback="prevCallback" let-nextCallback="nextCallback"  let-index="index">
+      <div class="flex flex-column h-12rem">
+          <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+             
+            <label for="numberInput">Clock Drawing: </label>
+      <!--       <p-selectButton 
+            style="text-align: center;"
+            [options]="stateOptions" 
+            [(ngModel)]="value" 
+            optionLabel="label" 
+            optionValue="value" />   -->
+          
+              <ul>
+                <li>Normal clock = 2 points. A normal clock has all numbers placed in the correct sequence and approximately correct position (e.g., 12, 3, 6 and 9 are in anchor positions) with no missing or duplicate numbers. Hands are pointing to the 11 and 2 (11:10).</li>
+               
+                <li>Inability or refusal to draw a clock (abnormal) = 0 points.</li>
+            </ul>
+            
+    
+              <img fetchpriority="high" decoding="async" class="img-with-animation skip-lazy animated-in" data-delay="0" height="auto" width="2261" data-animation="fade-in" src="https://mini-cog.com/wp-content/uploads/2022/03/Screen-Shot-2022-03-31-at-2.34.37-PM.png" alt="" srcset="https://mini-cog.com/wp-content/uploads/2022/03/Screen-Shot-2022-03-31-at-2.34.37-PM.png 2261w, https://mini-cog.com/wp-content/uploads/2022/03/Screen-Shot-2022-03-31-at-2.34.37-PM-300x124.png 300w, https://mini-cog.com/wp-content/uploads/2022/03/Screen-Shot-2022-03-31-at-2.34.37-PM-1024x422.png 1024w, https://mini-cog.com/wp-content/uploads/2022/03/Screen-Shot-2022-03-31-at-2.34.37-PM-768x316.png 768w, https://mini-cog.com/wp-content/uploads/2022/03/Screen-Shot-2022-03-31-at-2.34.37-PM-1536x632.png 1536w, https://mini-cog.com/wp-content/uploads/2022/03/Screen-Shot-2022-03-31-at-2.34.37-PM-2048x843.png 2048w, https://mini-cog.com/wp-content/uploads/2022/03/Screen-Shot-2022-03-31-at-2.34.37-PM-1870x770.png 1870w" sizes="(max-width: 2261px) 100vw, 2261px">
+
+         
+              
+              <p-messages severity="info">
+                <ng-template pTemplate>
+                     <div class="ml-2">   Hand length is not scored. 
+                    </div>
+                </ng-template>
+            </p-messages>
+
+           
+
+            </div>
+</div>
+<div class="flex py-4 gap-2"> 
+  <p-button label="Next" (onClick)="nextCallback.emit()" />
+</div>
+</ng-template>
+
+</p-stepperPanel>
+
+<p-stepperPanel header="Total Score ">
+
+
+  <ng-template pTemplate="content" let-prevCallback="prevCallback" let-nextCallback="nextCallback"  let-index="index">
+      <div class="flex flex-column h-12rem">
+          <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+              
+          
+            
+            <h2>Total score = Word Recall score + Clock Draw score.</h2>
+            <ul>
+                <li>A cut point of less than 3 on the Mini-Cog™ has been validated for dementia screening, but many individuals with clinically meaningful cognitive impairment will score higher.</li>
+               
+                <li>When greater sensitivity is desired, a cut point of less than 4 is recommended as it may indicate a need for further evaluation of cognitive status.</li>
+            </ul>
+          </div>
+      </div>
+      <div class="flex py-4 gap-2"> 
+          <p-button label="Next" (onClick)="nextCallback.emit()" />
+      </div>
+  </ng-template>
+</p-stepperPanel>
+
+ 
+  
+</p-stepper>

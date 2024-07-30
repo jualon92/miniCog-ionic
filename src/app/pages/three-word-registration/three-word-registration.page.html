@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Three Word Registration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Three Word Registration</ion-title>
+    </ion-toolbar>
+  </ion-header> 
+
+  <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+
+    <p>Look directly at the person and say: <br> “Please listen carefully. I am going to say three words that I want you to repeat back to me now and try to remember. 
+      
+      <br>  
+    </p>
+      <h2> The words are</h2> 
+   <ul>
+    <li>              Banana</li>
+    <li>       Sunrise</li>
+      <li>        Chair</li>
+   </ul>
+
+
+    <p>After you have said all three words, ask the person to repeat them back to you. </p>
+    
+    
+    <p-messages severity="info">
+      <ng-template pTemplate>
+           <div class="ml-2">Repeat the words if necessary, but do not provide any additional information or cues.</div>
+      </ng-template>
+  </p-messages>
+
+
+
+    <p-messages severity="warn">
+      <ng-template pTemplate>
+           <div class="ml-2">If the person is unable to repeat the words after three attempts, move on to Step 2 (clock drawing)..</div>
+      </ng-template>
+  </p-messages>
+
+
+
+
+  </div>
+
+  <div class="ion-text-center">
+    <ion-button [routerLink]="['/clow-drawing']">Done. Go to step 2</ion-button> 
+  </div>
+   
+</ion-content>

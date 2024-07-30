@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Scoring 1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Scoring 1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+   
+    You will be asking the person to recall the set of 3 words you gave them at the beginning of the test. 
+    <ol>
+     
+        <li>   Say, “What were the three words I asked you to remember?” </li>
+      
+      <li>  Write down the words the person said </li>
+
+
+      <p>Word list picked:</p>
+      <ol>
+          <li>Banana</li>
+          <li>Sunrise</li>
+          <li>Chair</li>
+      </ol>
+
+    </ol>
+
+     <h3> Give 1 point for each correct word without cues.  </h3>  
+
+
+     <p-messages severity="info">
+      <ng-template pTemplate>
+           <div class="ml-2">   Hand length is not scored. 
+          </div>
+      </ng-template>
+  </p-messages>
+  </div>
+ 
+  <div class="ion-text-center">
+    <ion-button [routerLink]="['/score-clock']">Next step</ion-button> 
+  </div>
+</ion-content>

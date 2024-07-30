@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>scoreClock</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">scoreClock</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+             
+    
+<!--       <p-selectButton 
+    style="text-align: center;"
+    [options]="stateOptions" 
+    [(ngModel)]="value" 
+    optionLabel="label" 
+    optionValue="value" />   -->
+  
+   <!--    <ul>
+        <li>Normal clock = 2 points. A normal clock has all numbers placed in the correct sequence and approximately correct position (e.g., 12, 3, 6 and 9 are in anchor positions) with no missing or duplicate numbers. Hands are pointing to the 11 and 2 (11:10).</li>
+       
+        <li>Inability or refusal to draw a clock (abnormal) = 0 points.</li>
+    </ul>
+     -->
+     <h1>2 points for a normal clock or 0 (zero) points for an abnormal clock drawing. </h1>  
+     <ul>
+      
+        <li>A normal clock must include all numbers (1-12), each only once, in the correct order and direction (clockwise).</li>
+          <li> There must also be two hands present, one pointing to the 11 and one pointing to 2.</li>
+</ul>
+      <img fetchpriority="high" decoding="async" class="img-with-animation skip-lazy animated-in" data-delay="0" height="auto" width="2261" data-animation="fade-in" src="https://mini-cog.com/wp-content/uploads/2022/03/Screen-Shot-2022-03-31-at-2.34.37-PM.png" alt="" srcset="https://mini-cog.com/wp-content/uploads/2022/03/Screen-Shot-2022-03-31-at-2.34.37-PM.png 2261w, https://mini-cog.com/wp-content/uploads/2022/03/Screen-Shot-2022-03-31-at-2.34.37-PM-300x124.png 300w, https://mini-cog.com/wp-content/uploads/2022/03/Screen-Shot-2022-03-31-at-2.34.37-PM-1024x422.png 1024w, https://mini-cog.com/wp-content/uploads/2022/03/Screen-Shot-2022-03-31-at-2.34.37-PM-768x316.png 768w, https://mini-cog.com/wp-content/uploads/2022/03/Screen-Shot-2022-03-31-at-2.34.37-PM-1536x632.png 1536w, https://mini-cog.com/wp-content/uploads/2022/03/Screen-Shot-2022-03-31-at-2.34.37-PM-2048x843.png 2048w, https://mini-cog.com/wp-content/uploads/2022/03/Screen-Shot-2022-03-31-at-2.34.37-PM-1870x770.png 1870w" sizes="(max-width: 2261px) 100vw, 2261px">
+
+ 
+      
+      <p-messages severity="info">
+        <ng-template pTemplate>
+             <div class="ml-2">   Hand length is not scored. 
+            </div>
+        </ng-template>
+    </p-messages>
+
+   
+
+    </div>
+    <div class="ion-text-center">
+      <ion-button [routerLink]="['/results']">See Results</ion-button>
+    </div> 
+</ion-content>
