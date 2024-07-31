@@ -1,0 +1,17 @@
+{ 
+  "HOME": {
+    "WHAT_IS_APP":  {
+      "TITLE": "What is the app?",
+      "DESCRIPTION": "This is an app that will take you step by step to do the Mini Cog test with a loved one."
+    },
+    "WHAT_IS_MINICOG":{
+      "TITLE": "What is  Mini Cog?",
+      "DESCRIPTION": "The Mini Cog test is a brief cognitive screening test that is used to detect cognitive impairment in older adults. It consists of a three-item recall test for memory and a simple clock-drawing test."
+    },
+    "WHO_IS_THIS_FOR":{
+      "TITLE": "Who is this for?",
+      "DESCRIPTION": "This test is designed to be administered by one person to another, such as a family member or loved one."
+    },
+    "START_BUTTON": "START" 
+  }
+}
