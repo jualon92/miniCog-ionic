@@ -1,7 +1,17 @@
 {
-  "pepe":"pepe_es",
   "HOME": {
-    "TITLE": "Home_es",
-    "WELCOME": "Welcome to the home page_es"
+    "WHAT_IS_APP": {
+      "TITLE": "¿Qué es esta app?",
+      "DESCRIPTION": "Esta es una aplicación que te guiará paso a paso para realizar la prueba Mini Cog con un ser querido."
+    },
+    "WHAT_IS_MINICOG": {
+      "TITLE": "¿Qué es el Mini Cog?",
+      "DESCRIPTION": "La prueba Mini Cog es una prueba breve de detección cognitiva que se utiliza para detectar deterioro cognitivo en adultos mayores. Consiste en una prueba de recuerdo de tres elementos para la memoria y una simple prueba de dibujo de un reloj."
+    },
+    "WHO_IS_THIS_FOR": {
+      "TITLE": "¿Para quién es esto?",
+      "DESCRIPTION": "Esta prueba está diseñada para ser administrada por una persona a otra, como un miembro de la familia o un ser querido."
+    },
+    "START_BUTTON": "INICIAR"
   }
 }

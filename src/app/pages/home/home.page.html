@@ -9,24 +9,26 @@
 
    
   <ion-content [fullscreen]="true">
-
+    <ng-container *transloco="let t">
+      
     <ul>
       <li>
-        <strong>What is this?</strong>
-        <p>This is an app that will take you step by step to do the Mini Cog test with a loved one.</p>
+        <strong> {{t("HOME.WHAT_IS_APP.TITLE")}}</strong>
+        <p>{{t("HOME.WHAT_IS_APP.DESCRIPTION")}} </p>
       </li>
       <li>
-        <strong>What is Mini Cog?</strong>
-        <p>The Mini Cog test is a brief cognitive screening test that is used to detect cognitive impairment in older adults. It consists of a three-item recall test for memory and a simple clock-drawing test.</p>
+        <strong> {{t("HOME.WHAT_IS_MINICOG.TITLE")}} </strong>
+        <p>{{t("HOME.WHAT_IS_MINICOG.DESCRIPTION")}}</p>
       </li>
       <li>
-        <strong>Who is this for?</strong>
-        <p>This test is designed to be administered by one person to another, such as a family member or loved one.</p>
+        <strong>{{t("HOME.WHO_IS_THIS_FOR.TITLE")}}</strong>
+        <p>{{t("HOME.WHO_IS_THIS_FOR.DESCRIPTION")}}</p>
       </li>
     </ul>
     <div class="ion-text-center">
-      <ion-button [routerLink]="['/before-we-start']">START</ion-button>
+      <ion-button [routerLink]="['/before-we-start']">{{t("HOME.START_BUTTON")}}</ion-button>
     </div>  
+  </ng-container>
   </ion-content>
   
  
