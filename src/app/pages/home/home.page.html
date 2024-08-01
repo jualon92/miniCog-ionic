@@ -17,21 +17,23 @@
     [modal]="true"
     closable="false"
     [(visible)]="displayLangOptions" 
-    [style]="{  height: '50vh'}"  
+    [style]="{  height: 'auto'}"  
     [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }">
-   
+  
+    <div class="lang-container">
+
     
     <p-listbox 
     [options]="languages" 
     [(ngModel)]="selectedLang" 
     optionLabel="name"  
-    [style]="{'width':'auto',  }" 
+   
     [listStyle]="{'max-height': '220px','justify-content':'center' }" />
     
     <div class="ion-text-center">
-      <ion-button [disabled]="!selectedLang" (click)="handleLangSelection()">DONE</ion-button>
+      <ion-button style="margin-top:1rem"[disabled]="!selectedLang" (click)="handleLangSelection()">SELECT</ion-button>
     </div>  
-    
+  </div>  
 </p-dialog>
 
 
