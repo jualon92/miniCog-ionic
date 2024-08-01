@@ -7,11 +7,13 @@ import { IonicModule } from '@ionic/angular';
 import { BeforeWeStartPageRoutingModule } from './before-we-start-routing.module';
 
 import { BeforeWeStartPage } from './before-we-start.page';
+import { TranslocoRootModule } from 'src/app/transloco-root.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
+    TranslocoRootModule,
     IonicModule,
     BeforeWeStartPageRoutingModule
   ],

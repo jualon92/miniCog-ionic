@@ -13,5 +13,13 @@
       "DESCRIPTION": "This test is designed to be administered by one person to another, such as a family member or loved one."
     },
     "START_BUTTON": "START" 
-  }
+  },
+   "BEFORE_WE_START":{
+    "TITLE": "Before we start",
+    "TOOLS": " Grab a pencil, and a paper",
+    "PERSON_ATTENTION": "Make sure the person is paying attention",
+    "EXPLAIN": "Explain that you are going to ask them to remember three words and draw a clock",
+    "QUIET_PLACE": " Find a quiet place without distractions",
+    "READY": "I am ready"
+   }
 }

@@ -13,5 +13,17 @@
       "DESCRIPTION": "Esta prueba está diseñada para ser administrada por una persona a otra, como un miembro de la familia o un ser querido."
     },
     "START_BUTTON": "INICIAR"
+  },
+  "BEFORE_WE_START": {
+    "TITLE": "Antes de comenzar",
+    "TOOLS": "Agarra un lápiz y un papel",
+    "PERSON_ATTENTION": "Asegúrate de que la persona esté prestando atención",
+    "EXPLAIN": "Explica que le vas a pedir que recuerde tres palabras y dibuje un reloj",
+    "QUIET_PLACE": "Encuentra un lugar tranquilo sin distracciones",
+    "READY": "Estoy listo"
+  },
+  "WORD_RECALL":{
+    
   }
+
 }
