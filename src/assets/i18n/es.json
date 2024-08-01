@@ -22,8 +22,12 @@
     "QUIET_PLACE": "Encuentra un lugar tranquilo sin distracciones",
     "READY": "Estoy listo"
   },
-  "WORD_RECALL":{
-    
-  }
+  "WORD_RECALL": {
+    "TITLE": "Recordar 3 Palabras",
+    "DESCRIPTION": "En esta parte del test, le pedirás a la persona que recuerde tres palabras. Dirás las palabras una a una y le pedirás a la persona que las repita. Después de haber dicho las tres palabras, pídele a la persona que las repita nuevamente. Si la persona puede recordar las tres palabras, pasará a la siguiente parte del test.",
+    "REPEAT": "Repite las palabras si es necesario, pero no proporciones información adicional ni pistas.",
+    "UNABLE_REPEAT": "Si la persona no puede repetir las palabras después de tres intentos, pasa al Paso 2 (dibujo del reloj).",
+    "CONTINUE": "Listo. Ve al paso 2"
+}
 
 }
