@@ -1,13 +1,14 @@
+<ng-container *transloco="let t">
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Results</ion-title>
+    <ion-title>{{t("RESULTS.TITLE")}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Results</ion-title>
+      <ion-title size="large">{{t("RESULTS.TITLE")}}</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -15,16 +16,18 @@
               
           
             
-    <h2>Total score = Word Recall score + Clock Draw score.</h2>
+    <h2>{{t("RESULTS.BRIEF_DESCRIPTION")}}</h2>
     <ul>
-        <li>A cut point of  <b>less than 3   </b> on the Mini-Cog™ has been validated for dementia screening, but many individuals with clinically meaningful cognitive impairment will score higher.</li>
+        <li>{{t("RESULTS.CUT_POINT")}} </li>
        
-        <li>When greater sensitivity is desired, a cut point of <b> less than 4 </b> is recommended as it may indicate a need for further evaluation of cognitive status.</li>
+        <li>{{t("RESULTS.INTERPRETATION")}} </li>
     </ul>
   </div>
 
   <div class="ion-text-center">
-    <ion-button [routerLink]="['']">REDO test</ion-button> 
+    <ion-button [routerLink]="['']">{{t("RESULTS.CONTINUE")}}</ion-button> 
   </div>
 
 </ion-content>
+
+</ng-container>
