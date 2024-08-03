@@ -14,6 +14,7 @@ import { DialogModule } from 'primeng/dialog';
 import { DropdownModule } from 'primeng/dropdown';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { ListboxModule } from 'primeng/listbox';
+import { IonicStorageModule } from '@ionic/storage-angular';
 @NgModule({
   imports: [
     DropdownModule,
@@ -21,6 +22,7 @@ import { ListboxModule } from 'primeng/listbox';
     CommonModule,
     FormsModule,
     DialogModule,
+    IonicStorageModule,
     TranslocoRootModule,
     IonicModule,
     HomePageRoutingModule
