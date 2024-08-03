@@ -14,11 +14,11 @@ export class HomePage {
    NO_LANG_CACHE = true;
    //TODO: make lang selection modal a component
    languages = [
-    { name: 'English', code: 'en' },
-    { name: 'Spanish', code: 'es' },
-    { name: 'French', code: 'fr' },
-    { name: 'German', code: 'de' },
-    { name: 'Italian', code: 'it' },
+    { name: 'English', code: 'en', disabled: false },
+    { name: 'Spanish', code: 'es',  disabled: false },
+    { name: 'French', code: 'fr',  disabled: true },
+    { name: 'German', code: 'de',  disabled: true },
+    { name: 'Italian', code: 'it',  disabled: true },
 ];
     
 
