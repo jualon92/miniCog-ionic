@@ -1,6 +1,7 @@
+<ng-container *transloco="let t">
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title size="large">FAQ - Mini Cog</ion-title>
+    <ion-title size="large">{{t("HOME.FAQ")}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -8,36 +9,11 @@
 
 
    
-  <ion-content [fullscreen]="true">
-    <ng-container *transloco="let t">
-      
+  <ion-content [fullscreen]="true" >
+ 
+      <div >  
 
-      <p-dialog 
-    header="Pick your language first" 
-    [modal]="true"
-    closable="false"
-    [(visible)]="displayLangOptions" 
-    [style]="{  height: 'auto'}"  
-    [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }">
-  
-    <div class="lang-container">
-
-    
-    <p-listbox 
-    [options]="languages" 
-    [(ngModel)]="selectedLang" 
-    optionLabel="name"  
-    optionDisabled="disabled"
-   
-    [listStyle]="{'max-height': '220px','justify-content':'center' }" />
-    
-    <div class="ion-text-center">
-      <ion-button style="margin-top:1rem"[disabled]="!selectedLang" (click)="handleLangSelection()">SELECT</ion-button>
-    </div>  
-  </div>  
-</p-dialog>
-
-
+ 
     <ul>
       <li>
         <strong> {{t("HOME.WHAT_IS_APP.TITLE")}}</strong>
@@ -55,7 +31,34 @@
     <div class="ion-text-center">
       <ion-button [routerLink]="['/before-we-start']">{{t("HOME.START_BUTTON")}}</ion-button>
     </div>  
-  </ng-container>
+  </div>
   </ion-content>
-  
+</ng-container>
  
+
+
+
+<p-dialog 
+header="Pick your language first" 
+[modal]="true"
+closable="false"
+[(visible)]="displayLangOptions" 
+[style]="{  height: 'auto'}"  
+[breakpoints]="{ '1199px': '75vw', '575px': '90vw' }">
+
+<div class="lang-container">
+
+
+<p-listbox 
+[options]="languages" 
+[(ngModel)]="selectedLang" 
+optionLabel="name"  
+optionDisabled="disabled"
+
+[listStyle]="{'max-height': '220px','justify-content':'center' }" />
+
+<div class="ion-text-center">
+  <ion-button style="margin-top:1rem"[disabled]="!selectedLang" (click)="handleLangSelection()">SELECT</ion-button>
+</div>  
+</div>  
+</p-dialog>
