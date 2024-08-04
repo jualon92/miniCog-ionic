@@ -1,37 +1,69 @@
 {
+  "HOME": {
+    "FAQ": "FAQ - Mini Cog",
+    "WHAT_IS_APP": {
+      "TITLE": "Was ist die App?",
+      "DESCRIPTION": "Dies ist eine App, die Sie Schritt für Schritt durch den Mini-Cog-Test mit einer geliebten Person führt."
+    },
+    "WHAT_IS_MINICOG": {
+      "TITLE": "Was ist Mini Cog?",
+      "DESCRIPTION": "Der Mini-Cog-Test ist ein kurzer kognitiver Screening-Test, der zur Erkennung kognitiver Beeinträchtigungen bei älteren Erwachsenen verwendet wird. Er besteht aus einem dreiteiligen Erinnerungstest und einem einfachen Uhr-Zeichentest."
+    },
+    "WHO_IS_THIS_FOR": {
+      "TITLE": "Für wen ist das?",
+      "DESCRIPTION": "Dieser Test ist dazu gedacht, von einer Person für eine andere durchgeführt zu werden, z. B. von einem Familienmitglied oder einer geliebten Person."
+    },
+    "START_BUTTON": "START"
+  },
+  "BEFORE_WE_START": {
+    "TITLE": "Bevor wir anfangen",
+    "TOOLS": "Nehmen Sie einen Stift und ein Blatt Papier",
+    "PERSON_ATTENTION": "Stellen Sie sicher, dass die Person aufmerksam ist",
+    "EXPLAIN": "Erklären Sie, dass Sie sie bitten werden, sich drei Wörter zu merken und eine Uhr zu zeichnen",
+    "QUIET_PLACE": "Finden Sie einen ruhigen Ort ohne Ablenkungen",
+    "READY": "Ich bin bereit"
+  },
+  "WORD_RECALL": {
+    "TITLE": "3-Wort-Erinnerung",
+    "DESCRIPTION": "In diesem Teil des Tests werden Sie die Person bitten, sich drei Wörter zu merken. Sie nennen die Wörter nacheinander und bitten die Person, sie zu wiederholen. Nachdem Sie alle drei Wörter gesagt haben, bitten Sie die Person, sie erneut zu wiederholen. Wenn die Person sich alle drei Wörter merken kann, geht sie zum nächsten Teil des Tests über.",
+    "REPEAT": "Wiederholen Sie die Wörter bei Bedarf, geben Sie jedoch keine zusätzlichen Informationen oder Hinweise.",
+    "UNABLE_REPEAT": "Wenn die Person die Wörter nach drei Versuchen nicht wiederholen kann, gehen Sie zu Schritt 2 (Uhr zeichnen) über.",
+    "CONTINUE": "Fertig. Gehe zu Schritt 2"
+  },
   "CLOCK_DRAWING": {
     "TITLE": "Uhr Zeichnen",
     "DESCRIPTION": "Geben Sie der Person ein leeres Blatt Papier und einen Stift oder Bleistift.",
-    "CIRCLE_PAPER": "Es ist akzeptabel, ein Blatt Papier mit dem bereits gezeichneten Kreis bereitzustellen.",
-    "REQUEST": "Sagen Sie: “Als Nächstes möchte ich, dass Sie eine Uhr für mich zeichnen. Zuerst tragen Sie alle Zahlen an die richtigen Stellen ein.”",
-    "DRAW_HOUR": "Wenn das erledigt ist, sagen Sie: “Nun stellen Sie die Zeiger auf 11:10.”",
+    "CIRCLE_PAPER": "Es ist akzeptabel, ein Blatt Papier mit bereits gezeichnetem Kreis zur Verfügung zu stellen.",
+    "REQUEST": "Sagen Sie: „Als nächstes möchte ich, dass Sie eine Uhr für mich zeichnen. Zuerst platzieren Sie alle Zahlen an den richtigen Stellen.“",
+    "DRAW_HOUR": "Wenn dies abgeschlossen ist, sagen Sie: „Stellen Sie jetzt die Zeiger auf 11 Uhr 10 Minuten.“",
     "REPEAT_INFO": "Wiederholen Sie die Anweisungen nach Bedarf, da dies kein Gedächtnistest ist.",
-    "UNABLE_DRAW": "Fahren Sie mit Schritt 3 fort, wenn die Uhr nicht innerhalb von drei Minuten fertig ist.",
+    "UNABLE_DRAW": "Gehen Sie zu Schritt 3 über, wenn die Uhr innerhalb von drei Minuten nicht fertig ist.",
     "CONTINUE": "Fertig. Bewerten Sie den Test."
   },
   "SCORE_WORDS": {
-    "TITLE": "Bewertung des Wortabrufs",
-    "REQUEST": "Sie werden die Person bitten, sich an die 3 Wörter zu erinnern, die Sie ihr zu Beginn des Tests gegeben haben.",
-    "QUESTION": "Sagen Sie: “Was waren die drei Wörter, die ich Sie gebeten habe, sich zu merken?”",
+    "TITLE": "Bewertung der Worterinnerung",
+    "REQUEST": "Sie werden die Person bitten, sich die 3 Wörter zu erinnern, die Sie zu Beginn des Tests gegeben haben.",
+    "QUESTION": "Sagen Sie: „Welche drei Wörter habe ich Sie gebeten zu merken?“",
     "WRITE_DOWN": "Schreiben Sie die Wörter auf, die die Person gesagt hat.",
-    "PICKED_WORDS": "Wortliste ausgewählt",
+    "PICKED_WORDS": "Ausgewählte Wortliste",
     "SCORE_BASIS": "Geben Sie 1 Punkt für jedes richtige Wort ohne Hinweise.",
     "HAND_INFO": "Die Länge der Hand wird nicht bewertet.",
-    "CONTINUE": "Nächster Schritt."
+    "CONTINUE": "Nächster Schritt"
   },
   "SCORE_CLOCK": {
-    "TITLE": "Bewertung des Uhrzeichnens",
-    "SCORE_BASIS": "2 Punkte für eine normale Uhr oder 0 (null) Punkte für eine anormale Uhrzeichnung.",
+    "TITLE": "Bewertung des Uhr-Zeichnens",
+    "SCORE_BASIS": "2 Punkte für eine normale Uhr oder 0 (null) Punkte für eine anormale Uhr-Zeichnung.",
     "CORRECT_CLOCK": "Eine normale Uhr muss alle Zahlen (1-12) enthalten, jede nur einmal, in der richtigen Reihenfolge und Richtung (im Uhrzeigersinn).",
-    "CORRECT_HANDS": "Es müssen auch zwei Zeiger vorhanden sein, einer zeigt auf 11 und einer auf 2.",
+    "CORRECT_HANDS": "Es müssen auch zwei Zeiger vorhanden sein, einer zeigt auf die 11 und einer auf die 2.",
     "HAND_INFO": "Die Länge der Zeiger wird nicht bewertet.",
-    "CONTINUE": "Ergebnisse anzeigen."
+    "CONTINUE": "Ergebnisse ansehen"
   },
   "RESULTS": {
     "TITLE": "Ergebnisse",
-    "BRIEF_DESCRIPTION": "Gesamtpunktzahl = Punktzahl für den Wortabruf + Punktzahl für das Uhrzeichnen.",
-    "CUT_POINT": "Ein Schwellenwert von <b>weniger als 3</b> im Mini-Cog™ wurde für das Demenzscreening validiert, aber viele Personen mit klinisch bedeutsamer kognitiver Beeinträchtigung erzielen eine höhere Punktzahl.",
-    "INTERPRETATION": "Wenn eine höhere Sensitivität gewünscht wird, wird ein Schwellenwert von <b>weniger als 4</b> empfohlen, da dies auf die Notwendigkeit einer weiteren Bewertung des kognitiven Zustands hinweisen kann.",
-    "CONTINUE": "Test WIEDERHOLEN."
+    "BRIEF_DESCRIPTION": "Gesamtpunktzahl = Worterinnerungspunktzahl + Uhr-Zeichnungs-Punktzahl.",
+    "CUT_POINT": "Ein Schwellenwert von <b>weniger als 3</b> bei Mini-Cog™ wurde zur Demenz-Screening validiert, aber viele Personen mit klinisch bedeutsamen kognitiven Beeinträchtigungen werden höhere Werte erzielen.",
+    "INTERPRETATION": "Wenn eine höhere Sensitivität erforderlich ist, wird ein Schwellenwert von <b>weniger als 4</b> empfohlen, da dies auf einen weiteren Bewertungsbedarf des kognitiven Status hindeuten kann.",
+    "CONTINUE": "Test wiederholen"
   }
 }
+

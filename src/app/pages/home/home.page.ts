@@ -18,7 +18,7 @@ export class HomePage {
       { name: 'English', code: 'en', disabled: false },
       { name: 'Spanish', code: 'es', disabled: false },
       { name: 'Portuguese', code: 'pt', disabled: false },
-      { name: 'Chinese', code: 'zh', disabled: false },
+     /*  { name: 'Chinese', code: 'zh', disabled: true }, */
       { name: 'French', code: 'fr', disabled: false },
       { name: 'German', code: 'de', disabled: false },
       { name: 'Italian', code: 'it', disabled: false },

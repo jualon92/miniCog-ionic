@@ -1,4 +1,35 @@
 {
+  "HOME": {
+    "FAQ": "FAQ - Mini Cog",
+    "WHAT_IS_APP": {
+      "TITLE": "¿Qué es esta app?",
+      "DESCRIPTION": "Esta es una aplicación que te guiará paso a paso para realizar la prueba Mini Cog con un ser querido."
+    },
+    "WHAT_IS_MINICOG": {
+      "TITLE": "¿Qué es el Mini Cog?",
+      "DESCRIPTION": "La prueba Mini Cog es una prueba breve de detección cognitiva que se utiliza para detectar deterioro cognitivo en adultos mayores. Consiste en una prueba de recuerdo de tres elementos para la memoria y una simple prueba de dibujo de un reloj."
+    },
+    "WHO_IS_THIS_FOR": {
+      "TITLE": "¿Para quién es esto?",
+      "DESCRIPTION": "Esta prueba está diseñada para ser administrada por una persona a otra, como un miembro de la familia o un ser querido."
+    },
+    "START_BUTTON": "INICIAR"
+  },
+  "BEFORE_WE_START": {
+    "TITLE": "Antes de comenzar",
+    "TOOLS": "Agarra un lápiz y un papel",
+    "PERSON_ATTENTION": "Asegúrate de que la persona esté prestando atención",
+    "EXPLAIN": "Explica que le vas a pedir que recuerde tres palabras y dibuje un reloj",
+    "QUIET_PLACE": "Encuentra un lugar tranquilo sin distracciones",
+    "READY": "Estoy listo"
+  },
+  "WORD_RECALL": {
+    "TITLE": "Recordar 3 Palabras",
+    "DESCRIPTION": "En esta parte del test, le pedirás a la persona que recuerde tres palabras. Dirás las palabras una a una y le pedirás a la persona que las repita. Después de haber dicho las tres palabras, pídele a la persona que las repita nuevamente. Si la persona puede recordar las tres palabras, pasará a la siguiente parte del test.",
+    "REPEAT": "Repite las palabras si es necesario, pero no proporciones información adicional ni pistas.",
+    "UNABLE_REPEAT": "Si la persona no puede repetir las palabras después de tres intentos, pasa al Paso 2 (dibujo del reloj).",
+    "CONTINUE": "Listo. Ve al paso 2"
+  },
   "CLOCK_DRAWING": {
     "TITLE": "Dibujo del Reloj",
     "DESCRIPTION": "Déle a la persona una hoja de papel en blanco y un bolígrafo o lápiz.",
