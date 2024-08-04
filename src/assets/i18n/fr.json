@@ -1,0 +1,37 @@
+{
+  "CLOCK_DRAWING": {
+    "TITLE": "Dessin de l'Horloge",
+    "DESCRIPTION": "Donnez à la personne une feuille de papier vierge et un stylo ou un crayon.",
+    "CIRCLE_PAPER": "Il est acceptable de fournir une feuille de papier avec le cercle déjà dessiné pour la personne.",
+    "REQUEST": "Dites: “Ensuite, je veux que vous dessiniez une horloge pour moi. D'abord, mettez tous les chiffres à leur place.”",
+    "DRAW_HOUR": "Lorsque cela est terminé, dites: “Maintenant, mettez les aiguilles à 11 heures 10.”",
+    "REPEAT_INFO": "Répétez les instructions si nécessaire, car ce n'est pas un test de mémoire.",
+    "UNABLE_DRAW": "Passez à l'étape 3 si l'horloge n'est pas terminée en trois minutes.",
+    "CONTINUE": "Fait. Notez le test."
+  },
+  "SCORE_WORDS": {
+    "TITLE": "Évaluation du rappel de mots",
+    "REQUEST": "Vous demanderez à la personne de se rappeler les 3 mots que vous lui avez donnés au début du test.",
+    "QUESTION": "Dites: “Quels étaient les trois mots que je vous ai demandé de retenir ?”",
+    "WRITE_DOWN": "Notez les mots que la personne a dits.",
+    "PICKED_WORDS": "Liste des mots choisis",
+    "SCORE_BASIS": "Donnez 1 point pour chaque mot correct sans indice.",
+    "HAND_INFO": "La longueur de la main n'est pas notée.",
+    "CONTINUE": "Étape suivante."
+  },
+  "SCORE_CLOCK": {
+    "TITLE": "Évaluation du Dessin de l'Horloge",
+    "SCORE_BASIS": "2 points pour une horloge normale ou 0 (zéro) point pour un dessin d'horloge anormal.",
+    "CORRECT_CLOCK": "Une horloge normale doit inclure tous les chiffres (1-12), chacun une seule fois, dans l'ordre et le sens corrects (sens des aiguilles d'une montre).",
+    "CORRECT_HANDS": "Il doit également y avoir deux aiguilles présentes, une pointant vers 11 et une vers 2.",
+    "HAND_INFO": "La longueur de la main n'est pas notée.",
+    "CONTINUE": "Voir les résultats."
+  },
+  "RESULTS": {
+    "TITLE": "Résultats",
+    "BRIEF_DESCRIPTION": "Score total = Score de Rappel des Mots + Score du Dessin de l'Horloge.",
+    "CUT_POINT": "Un point de coupure de <b>moins de 3</b> sur le Mini-Cog™ a été validé pour le dépistage de la démence, mais de nombreuses personnes présentant une déficience cognitive cliniquement significative obtiendront un score plus élevé.",
+    "INTERPRETATION": "Lorsqu'une plus grande sensibilité est souhaitée, un point de coupure de <b>moins de 4</b> est recommandé car il peut indiquer un besoin d'évaluation supplémentaire de l'état cognitif.",
+    "CONTINUE": "REFAIRE le test."
+  }
+}

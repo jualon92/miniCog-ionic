@@ -1,0 +1,37 @@
+{
+  "CLOCK_DRAWING": {
+    "TITLE": "Desenho do Relógio",
+    "DESCRIPTION": "Dê à pessoa uma folha de papel em branco e uma caneta ou lápis.",
+    "CIRCLE_PAPER": "É aceitável fornecer uma folha de papel com o círculo já desenhado para a pessoa.",
+    "REQUEST": "Diga: “Em seguida, quero que você desenhe um relógio para mim. Primeiro, coloque todos os números nos seus devidos lugares.”",
+    "DRAW_HOUR": "Quando isso estiver completo, diga: “Agora, ajuste os ponteiros para 11:10.”",
+    "REPEAT_INFO": "Repita as instruções conforme necessário, pois este não é um teste de memória.",
+    "UNABLE_DRAW": "Passe para o Passo 3 se o relógio não estiver completo em três minutos.",
+    "CONTINUE": "Concluído. Avalie o teste."
+  },
+  "SCORE_WORDS": {
+    "TITLE": "Pontuação da lembrança de palavras",
+    "REQUEST": "Você pedirá à pessoa que lembre o conjunto de 3 palavras que você deu no início do teste.",
+    "QUESTION": "Diga: “Quais foram as três palavras que eu pedi para você lembrar?”",
+    "WRITE_DOWN": "Escreva as palavras que a pessoa disse.",
+    "PICKED_WORDS": "Lista de palavras escolhidas",
+    "SCORE_BASIS": "Dê 1 ponto para cada palavra correta sem dicas.",
+    "HAND_INFO": "O comprimento da mão não é pontuado.",
+    "CONTINUE": "Próximo passo."
+  },
+  "SCORE_CLOCK": {
+    "TITLE": "Pontuação do Desenho do Relógio",
+    "SCORE_BASIS": "2 pontos para um relógio normal ou 0 (zero) pontos para um desenho de relógio anormal.",
+    "CORRECT_CLOCK": "Um relógio normal deve incluir todos os números (1-12), cada um apenas uma vez, na ordem e direção corretas (sentido horário).",
+    "CORRECT_HANDS": "Também devem estar presentes dois ponteiros, um apontando para 11 e outro para 2.",
+    "HAND_INFO": "O comprimento do ponteiro não é pontuado.",
+    "CONTINUE": "Veja os resultados."
+  },
+  "RESULTS": {
+    "TITLE": "Resultados",
+    "BRIEF_DESCRIPTION": "Pontuação total = Pontuação da Lembrança de Palavras + Pontuação do Desenho do Relógio.",
+    "CUT_POINT": "Um ponto de corte de <b>menos de 3</b> no Mini-Cog™ foi validado para triagem de demência, mas muitas pessoas com comprometimento cognitivo clinicamente significativo terão uma pontuação mais alta.",
+    "INTERPRETATION": "Quando se deseja maior sensibilidade, recomenda-se um ponto de corte de <b>menos de 4</b>, pois pode indicar a necessidade de uma avaliação adicional do estado cognitivo.",
+    "CONTINUE": "REFAR teste."
+  }
+}

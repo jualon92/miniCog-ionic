@@ -1,0 +1,37 @@
+{
+  "CLOCK_DRAWING": {
+    "TITLE": "Uhr Zeichnen",
+    "DESCRIPTION": "Geben Sie der Person ein leeres Blatt Papier und einen Stift oder Bleistift.",
+    "CIRCLE_PAPER": "Es ist akzeptabel, ein Blatt Papier mit dem bereits gezeichneten Kreis bereitzustellen.",
+    "REQUEST": "Sagen Sie: “Als Nächstes möchte ich, dass Sie eine Uhr für mich zeichnen. Zuerst tragen Sie alle Zahlen an die richtigen Stellen ein.”",
+    "DRAW_HOUR": "Wenn das erledigt ist, sagen Sie: “Nun stellen Sie die Zeiger auf 11:10.”",
+    "REPEAT_INFO": "Wiederholen Sie die Anweisungen nach Bedarf, da dies kein Gedächtnistest ist.",
+    "UNABLE_DRAW": "Fahren Sie mit Schritt 3 fort, wenn die Uhr nicht innerhalb von drei Minuten fertig ist.",
+    "CONTINUE": "Fertig. Bewerten Sie den Test."
+  },
+  "SCORE_WORDS": {
+    "TITLE": "Bewertung des Wortabrufs",
+    "REQUEST": "Sie werden die Person bitten, sich an die 3 Wörter zu erinnern, die Sie ihr zu Beginn des Tests gegeben haben.",
+    "QUESTION": "Sagen Sie: “Was waren die drei Wörter, die ich Sie gebeten habe, sich zu merken?”",
+    "WRITE_DOWN": "Schreiben Sie die Wörter auf, die die Person gesagt hat.",
+    "PICKED_WORDS": "Wortliste ausgewählt",
+    "SCORE_BASIS": "Geben Sie 1 Punkt für jedes richtige Wort ohne Hinweise.",
+    "HAND_INFO": "Die Länge der Hand wird nicht bewertet.",
+    "CONTINUE": "Nächster Schritt."
+  },
+  "SCORE_CLOCK": {
+    "TITLE": "Bewertung des Uhrzeichnens",
+    "SCORE_BASIS": "2 Punkte für eine normale Uhr oder 0 (null) Punkte für eine anormale Uhrzeichnung.",
+    "CORRECT_CLOCK": "Eine normale Uhr muss alle Zahlen (1-12) enthalten, jede nur einmal, in der richtigen Reihenfolge und Richtung (im Uhrzeigersinn).",
+    "CORRECT_HANDS": "Es müssen auch zwei Zeiger vorhanden sein, einer zeigt auf 11 und einer auf 2.",
+    "HAND_INFO": "Die Länge der Zeiger wird nicht bewertet.",
+    "CONTINUE": "Ergebnisse anzeigen."
+  },
+  "RESULTS": {
+    "TITLE": "Ergebnisse",
+    "BRIEF_DESCRIPTION": "Gesamtpunktzahl = Punktzahl für den Wortabruf + Punktzahl für das Uhrzeichnen.",
+    "CUT_POINT": "Ein Schwellenwert von <b>weniger als 3</b> im Mini-Cog™ wurde für das Demenzscreening validiert, aber viele Personen mit klinisch bedeutsamer kognitiver Beeinträchtigung erzielen eine höhere Punktzahl.",
+    "INTERPRETATION": "Wenn eine höhere Sensitivität gewünscht wird, wird ein Schwellenwert von <b>weniger als 4</b> empfohlen, da dies auf die Notwendigkeit einer weiteren Bewertung des kognitiven Zustands hinweisen kann.",
+    "CONTINUE": "Test WIEDERHOLEN."
+  }
+}

@@ -1,6 +1,7 @@
 { 
   "HOME": {
-    "WHAT_IS_APP":  {
+    "FAQ": "FAQ - Mini Cog",
+    "WHAT_IS_APP":  { 
       "TITLE": "What is the app?",
       "DESCRIPTION": "This is an app that will take you step by step to do the Mini Cog test with a loved one."
     },
@@ -28,5 +29,42 @@
       "REPEAT": "Repeat the words if necessary, but do not provide any additional information or cues.",
       "UNABLE_REPEAT":"If the person is unable to repeat the words after three attempts, move on to Step 2 (clock drawing)..",
       "CONTINUE": "Done. Go to step 2"
+    },
+    "CLOCK_DRAWING":{
+      "TITLE": "Clock Drawing",
+      "DESCRIPTION": "Give the person a blank sheet of paper and a pen or pencil.",
+      "CIRCLE_PAPER": "It is acceptable to provide a sheet of paper with the circle already drawn for the person.",
+      "REQUEST": "Say: “Next, I want you to draw a clock for me. First, put in all of the numbers where they go.”",
+      "DRAW_HOUR": "When that is completed, say: “Now, set the hands to 10 past 11.”",
+      "REPEAT_INFO": "Repeat instructions as needed as this is not a memory test.",
+      "UNABLE_DRAW": "Move to Step 3 if the clock is not complete within three minutes.",
+      "CONTINUE": "Done. Score the test"
+    },
+    "SCORE_WORDS": {
+      "TITLE": "Scoring the word recall",
+      "REQUEST":" You will be asking the person to recall the set of 3 words you gave them at the beginning of the test.",
+      "QUESTION": " Say, “What were the three words I asked you to remember?” ",
+      "WRITE_DOWN": "Write down the words the person said",
+      "PICKED_WORDS": "Word list picked",
+      "SCORE_BASIS":  "Give 1 point for each correct word without cues.",
+      "HAND_INFO": " Hand length is not scored. ",
+      "CONTINUE": "Next step"
+
+    },
+    "SCORE_CLOCK":{
+      "TITLE": "Scoring the Clock Drawing",
+      "SCORE_BASIS": "2 points for a normal clock or 0 (zero) points for an abnormal clock drawing.",
+      "CORRECT_CLOCK": "A normal clock must include all numbers (1-12), each only once, in the correct order and direction (clockwise).",
+      "CORRECT_HANDS": "There must also be two hands present, one pointing to the 11 and one pointing to 2.",
+      "HAND_INFO": "Hand length is not scored.",
+      "CONTINUE": "See Results"
+       
+    },
+    "RESULTS": {
+      "TITLE": "Results",
+      "BRIEF_DESCRIPTION": "Total score = Word Recall score + Clock Draw score.",
+      "CUT_POINT": "A cut point of  <b>less than 3   </b> on the Mini-Cog™ has been validated for dementia screening, but many individuals with clinically meaningful cognitive impairment will score higher.",
+      "INTERPRETATION":  "When greater sensitivity is desired, a cut point of <b> less than 4 </b> is recommended as it may indicate a need for further evaluation of cognitive status.",
+      "CONTINUE": "REDO test"
     }
 }
