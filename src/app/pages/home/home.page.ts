@@ -13,13 +13,23 @@ export class HomePage {
    displayLangOptions = false;
    NO_LANG_CACHE = true;
    //TODO: make lang selection modal a component
-   languages = [
-    { name: 'English', code: 'en', disabled: false },
-    { name: 'Spanish', code: 'es',  disabled: false },
-    { name: 'French', code: 'fr',  disabled: true },
-    { name: 'German', code: 'de',  disabled: true },
-    { name: 'Italian', code: 'it',  disabled: true },
-];
+   languages =
+    [
+      { name: 'English', code: 'en', disabled: false },
+      { name: 'Spanish', code: 'es', disabled: false },
+      { name: 'Portuguese', code: 'pt', disabled: false },
+      { name: 'Chinese', code: 'zh', disabled: false },
+      { name: 'French', code: 'fr', disabled: false },
+      { name: 'German', code: 'de', disabled: false },
+      { name: 'Italian', code: 'it', disabled: false },
+      { name: 'Japanese', code: 'ja', disabled: false },
+      { name: 'Korean', code: 'ko', disabled: false },
+      { name: 'Russian', code: 'ru', disabled: false },
+      { name: 'Arabic', code: 'ar', disabled: false },
+      { name: 'Bangali', code: 'bn', disabled: false },
+    
+  ]
+  
     
 
 
