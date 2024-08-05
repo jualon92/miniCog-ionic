@@ -1,39 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { TranslocoService } from '@jsverse/transloco';
 import { Storage } from '@ionic/storage-angular';
+import { Language } from '../shared/pick-lang-box/language';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
-  providers: [Storage]
+  providers: [Storage],
+  changeDetection: ChangeDetectionStrategy.OnPush,
  
 })
-export class HomePage {
+export class HomePage implements OnInit {
    displayLangOptions = false;
    NO_LANG_CACHE = true;
-   //TODO: make lang selection modal a component
-   languages =
-    [
-      { name: 'English', code: 'en', disabled: false },
-      { name: 'Spanish', code: 'es', disabled: false },
-      { name: 'Portuguese', code: 'pt', disabled: false },
-     /*  { name: 'Chinese', code: 'zh', disabled: true }, */
-      { name: 'French', code: 'fr', disabled: false },
-      { name: 'German', code: 'de', disabled: false },
-      { name: 'Italian', code: 'it', disabled: false },
-      { name: 'Japanese', code: 'ja', disabled: false },
-      { name: 'Korean', code: 'ko', disabled: false },
-      { name: 'Russian', code: 'ru', disabled: false },
-      { name: 'Arabic', code: 'ar', disabled: false },
-      { name: 'Bangali', code: 'bn', disabled: false },
     
-  ]
-  
-    
-
-
-   selectedLang: any | undefined;
 
   constructor(private translocoService: TranslocoService,
     private storage: Storage
@@ -65,9 +46,9 @@ export class HomePage {
     }
   }
 
-  handleLangSelection(){
-      this.storage.set('selectedLang', this.selectedLang.code);
-      this.translocoService.setActiveLang(this.selectedLang.code);
+  handleLangSelection(code: string){
+      this.storage.set('selectedLang', code);
+      this.translocoService.setActiveLang(code);
       this.displayLangOptions = false;
   }
 

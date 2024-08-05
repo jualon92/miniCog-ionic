@@ -1,64 +1,41 @@
 <ng-container *transloco="let t">
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title size="large">{{t("HOME.FAQ")}}</ion-title>
-  </ion-toolbar>
-</ion-header>
-
- 
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title size="large">{{t("HOME.FAQ")}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
 
-   
-  <ion-content [fullscreen]="true" >
- 
-      <div >  
 
- 
-    <ul  style="padding-left: 20px;">
-      <li>
-        <strong> {{t("HOME.WHAT_IS_APP.TITLE")}}</strong>
-        <p>{{t("HOME.WHAT_IS_APP.DESCRIPTION")}} </p>
-      </li>
-      <li>
-        <strong> {{t("HOME.WHAT_IS_MINICOG.TITLE")}} </strong>
-        <p>{{t("HOME.WHAT_IS_MINICOG.DESCRIPTION")}}</p>
-      </li>
-      <li>
-        <strong>{{t("HOME.WHO_IS_THIS_FOR.TITLE")}}</strong>
-        <p>{{t("HOME.WHO_IS_THIS_FOR.DESCRIPTION")}}</p>
-      </li>
-    </ul>
-    <div class="ion-text-center">
-      <ion-button [routerLink]="['/before-we-start']">{{t("HOME.START_BUTTON")}}</ion-button>
-    </div>  
-  </div>
+
+
+  <ion-content [fullscreen]="true">
+
+    <div>
+
+
+      <ul style="padding-left: 20px;">
+        <li>
+          <strong> {{t("HOME.WHAT_IS_APP.TITLE")}}</strong>
+          <p>{{t("HOME.WHAT_IS_APP.DESCRIPTION")}} </p>
+        </li>
+        <li>
+          <strong> {{t("HOME.WHAT_IS_MINICOG.TITLE")}} </strong>
+          <p>{{t("HOME.WHAT_IS_MINICOG.DESCRIPTION")}}</p>
+        </li>
+        <li>
+          <strong>{{t("HOME.WHO_IS_THIS_FOR.TITLE")}}</strong>
+          <p>{{t("HOME.WHO_IS_THIS_FOR.DESCRIPTION")}}</p>
+        </li>
+      </ul>
+      <div class="ion-text-center">
+        <ion-button [routerLink]="['/before-we-start']">{{t("HOME.START_BUTTON")}}</ion-button>
+      </div>
+    </div>
   </ion-content>
 </ng-container>
- 
 
 
 
-<p-dialog 
-header="Pick your language first" 
-[modal]="true"
-closable="false"
-[(visible)]="displayLangOptions" 
-[style]="{  height: 'auto'}"  
-[breakpoints]="{ '1199px': '75vw', '575px': '90vw' }">
 
-<div class="lang-container">
-
-
-<p-listbox 
-[options]="languages" 
-[(ngModel)]="selectedLang" 
-optionLabel="name"  
-optionDisabled="disabled"
- 
-[listStyle]="{'max-height': '220px','justify-content':'center' }" />
-
-<div class="ion-text-center">
-  <ion-button style="margin-top:1rem"[disabled]="!selectedLang" (click)="handleLangSelection()">SELECT</ion-button>
-</div>  
-</div>  
-</p-dialog>
+<app-pick-lang-box (langSelected)="handleLangSelection($event)" [displayLangOptions]="displayLangOptions" />

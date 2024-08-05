@@ -15,15 +15,15 @@ import { DropdownModule } from 'primeng/dropdown';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { ListboxModule } from 'primeng/listbox';
 import { IonicStorageModule } from '@ionic/storage-angular';
+import { PickLangBoxComponent } from '../shared/pick-lang-box/pick-lang-box.component';
 @NgModule({
   imports: [
     DropdownModule,
-    ListboxModule,
     CommonModule,
     FormsModule,
-    DialogModule,
     IonicStorageModule,
     TranslocoRootModule,
+    PickLangBoxComponent,
     IonicModule,
     HomePageRoutingModule
   ],
