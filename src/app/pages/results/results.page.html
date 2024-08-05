@@ -18,9 +18,9 @@
             
     <h2>{{t("RESULTS.BRIEF_DESCRIPTION")}}</h2>
     <ul>
-        <li>{{t("RESULTS.CUT_POINT")}} </li>
+        <li [innerHTML]="t('RESULTS.CUT_POINT') | safeHTML">  </li>
        
-        <li>{{t("RESULTS.INTERPRETATION")}} </li>
+        <li [innerHTML]="t('RESULTS.INTERPRETATION') | safeHTML" >  </li>
     </ul>
   </div>
 

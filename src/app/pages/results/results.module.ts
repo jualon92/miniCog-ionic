@@ -8,15 +8,17 @@ import { ResultsPageRoutingModule } from './results-routing.module';
 
 import { ResultsPage } from './results.page';
 import { TranslocoRootModule } from 'src/app/transloco-root.module';
+import { SafeHtmlPipe } from 'src/app/safe-html.pipe';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    
     TranslocoRootModule,
     ResultsPageRoutingModule
   ],
-  declarations: [ResultsPage]
+  declarations: [ResultsPage,SafeHtmlPipe]
 })
 export class ResultsPageModule {}
