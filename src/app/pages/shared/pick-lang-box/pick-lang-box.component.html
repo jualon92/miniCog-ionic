@@ -1,0 +1,14 @@
+<p-dialog header="Pick your language first" [modal]="true" closable="false" [(visible)]="displayLangOptions"
+  [style]="{  height: 'auto'}" [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }">
+
+  <div class="lang-container">
+
+
+    <p-listbox [options]="languages" [(ngModel)]="selectedLang" optionLabel="name" optionDisabled="disabled"
+      [listStyle]="{'max-height': '220px','justify-content':'center' }" />
+
+    <div class="ion-text-center">
+      <ion-button style="margin-top:1rem" [disabled]="!selectedLang" (click)="langSelected.emit(selectedLang.code)">SELECT</ion-button>
+    </div>
+  </div>
+</p-dialog>
