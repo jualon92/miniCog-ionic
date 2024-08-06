@@ -17,7 +17,7 @@
           
             
     <h2>{{t("RESULTS.BRIEF_DESCRIPTION")}}</h2>
-    <ul>
+    <ul aria-label="cut-point">
         <li [innerHTML]="t('RESULTS.CUT_POINT') | safeHTML">  </li>
        
         <li [innerHTML]="t('RESULTS.INTERPRETATION') | safeHTML" >  </li>
@@ -25,7 +25,7 @@
   </div>
 
   <div class="ion-text-center">
-    <ion-button [routerLink]="['']">{{t("RESULTS.CONTINUE")}}</ion-button> 
+    <ion-button  aria-label="redo the test"  [routerLink]="['']">{{t("RESULTS.CONTINUE")}}</ion-button> 
   </div>
 
 </ion-content>

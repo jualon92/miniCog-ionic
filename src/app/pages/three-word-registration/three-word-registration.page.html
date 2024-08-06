@@ -1,4 +1,4 @@
-<ng-container *transloco="let t">  
+<ng-container *transloco="let t">
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>{{t("WORD_RECALL.TITLE")}}</ion-title>
@@ -10,14 +10,14 @@
     <ion-toolbar>
       <ion-title size="large">{{t("WORD_RECALL.TITLE")}}</ion-title>
     </ion-toolbar>
-  </ion-header> 
+  </ion-header>
 
   <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
 
-    <p>Look directly at the person and say: <br> “Please listen carefully. I am going to say three words that I want you to repeat back to me now and try to remember. <br>  
+    <p>Look directly at the person and say: <br> “Please listen carefully. I am going to say three words that I want you to repeat back to me now and try to remember. <br>
     </p>
-      <h2> The words are</h2> 
-   <ul>
+      <h2> The words are</h2>
+   <ul aria-label="word list" >
     <li>              Banana</li>
     <li>       Sunrise</li>
       <li>        Chair</li>
@@ -25,8 +25,8 @@
 
 
     <p>After you have said all three words, ask the person to repeat them back to you. </p>
-    
-    
+
+
     <p-messages severity="info">
       <ng-template pTemplate>
            <div class="ml-2">{{t("WORD_RECALL.REPEAT")}}</div>
@@ -35,7 +35,7 @@
 
 
 
-    <p-messages severity="warn">
+    <p-messages severity="warn" >
       <ng-template pTemplate>
            <div class="ml-2">{{t("WORD_RECALL.UNABLE_REPEAT")}} </div>
       </ng-template>
@@ -47,9 +47,9 @@
   </div>
 
   <div class="ion-text-center">
-    <ion-button [routerLink]="['/clow-drawing']">{{t("WORD_RECALL.CONTINUE")}} </ion-button> 
+    <ion-button   aria-label="continue" [routerLink]="['/clow-drawing']">{{t("WORD_RECALL.CONTINUE")}} </ion-button>
   </div>
-   
+
 </ion-content>
 
 

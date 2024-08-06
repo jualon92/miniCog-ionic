@@ -1,22 +1,22 @@
 
-<ng-container *transloco="let t"> 
+<ng-container *transloco="let t">
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title> {{t("BEFORE_WE_START.TITLE")}} </ion-title>
   </ion-toolbar>
 </ion-header>
 
- 
 
-  
+
+
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large"> {{t("BEFORE_WE_START.TITLE")}}</ion-title>
     </ion-toolbar>
   </ion-header>
- 
-  <ul> 
+
+  <ul aria-label="requeriments">
     <li> {{t("BEFORE_WE_START.TOOLS")}} 📝</li>
     <li>  {{t("BEFORE_WE_START.PERSON_ATTENTION")}}👂 </li>
     <li>  {{t("BEFORE_WE_START.QUIET_PLACE")}} 🔵 </li>
@@ -24,10 +24,10 @@
   </ul>
 
   <div class="ion-text-center">
-  <ion-button   [routerLink]="['/three-word-registration']"> <li>  {{t("BEFORE_WE_START.READY")}} 🖊️</li></ion-button> 
+  <ion-button  aria-label="continue" [routerLink]="['/three-word-registration']"> <li>  {{t("BEFORE_WE_START.READY")}} 🖊️</li></ion-button>
   </div>
 </ion-content>
 
-    
+
 
 </ng-container>

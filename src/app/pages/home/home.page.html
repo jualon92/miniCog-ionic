@@ -29,7 +29,7 @@
         </li>
       </ul>
       <div class="ion-text-center">
-        <ion-button [routerLink]="['/before-we-start']">{{t("HOME.START_BUTTON")}}</ion-button>
+        <ion-button arial-label="continue" [routerLink]="['/before-we-start']">{{t("HOME.START_BUTTON")}}</ion-button>
       </div>
     </div>
   </ion-content>
@@ -38,4 +38,4 @@
 
 
 
-<app-pick-lang-box (langSelected)="handleLangSelection($event)" [displayLangOptions]="displayLangOptions" />
+<app-pick-lang-box  (langSelected)="handleLangSelection($event)" [displayLangOptions]="displayLangOptions" />

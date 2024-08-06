@@ -35,13 +35,13 @@
       <li>{{t("SCORE_CLOCK.CORRECT_CLOCK")}}</li>
       <li>{{t("SCORE_CLOCK.CORRECT_HANDS")}}</li>
     </ul>
-    <img fetchpriority="high" decoding="async" class="img-with-animation skip-lazy animated-in" data-delay="0"
+    <img  fetchpriority="high" decoding="async" class="img-with-animation skip-lazy animated-in" data-delay="0"
       height="auto" width="2261" data-animation="fade-in" src="../../../assets/images/mini-cog-example.png"
       alt="examples of normal vs abnormal clocks">
 
 
 
-    <p-messages severity="info">
+    <p-messages severity="info"  aria-label="Information about the length of the clock hands">
       <ng-template pTemplate>
         <div class="ml-2"> {{t("SCORE_CLOCK.HAND_INFO")}}
         </div>
@@ -52,7 +52,7 @@
 
   </div>
   <div class="ion-text-center">
-    <ion-button [routerLink]="['/results']">{{t("SCORE_CLOCK.CONTINUE")}}</ion-button>
+    <ion-button aria-label="continue"   [routerLink]="['/results']">{{t("SCORE_CLOCK.CONTINUE")}}</ion-button>
   </div>
 </ion-content>
 
