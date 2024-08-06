@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { TranslocoService } from '@jsverse/transloco';
 import { Storage } from '@ionic/storage-angular';
-import { Language } from '../shared/pick-lang-box/language';
 
 @Component({
   selector: 'app-home',
@@ -31,7 +30,7 @@ export class HomePage implements OnInit {
  
   async handleAppLang(){
     if (this.NO_LANG_CACHE){
-      this.storage.clear();
+      await this.storage.clear();
       this.displayLangOptions = true;
       return;
     }
