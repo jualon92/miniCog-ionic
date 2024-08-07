@@ -1,33 +1,47 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { TranslocoService } from '@jsverse/transloco';
 import { Storage } from '@ionic/storage-angular';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
-  providers: [Storage],
-  changeDetection: ChangeDetectionStrategy.OnPush,
- 
+  providers: [Storage, MessageService],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HomePage implements OnInit {
+export class HomePage implements OnInit, AfterViewInit {
    displayLangOptions = false;
    NO_LANG_CACHE = true;
     
 
   constructor(private translocoService: TranslocoService,
-    private storage: Storage
+    private storage: Storage,
+    private messageService: MessageService
   ) { 
     
   }
 
   async ngOnInit() {
     await this.storage.create();
-
     this.handleAppLang();
   }
   
- 
+  
+  ngAfterViewInit(){
+    this.handleDisplayNotification();
+  }
+
+
+  handleDisplayNotification(){
+    const userWidth = window.innerWidth;
+    if(userWidth > 1023){
+      this.messageService.add({ severity: 'warn', summary: 'Info', detail: 'Recommended to view on mobile device' });
+    }
+
+  } 
+
+
   async handleAppLang(){
     if (this.NO_LANG_CACHE){
       await this.storage.clear();

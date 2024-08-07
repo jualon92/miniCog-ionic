@@ -16,15 +16,23 @@ import { SelectButtonModule } from 'primeng/selectbutton';
 import { ListboxModule } from 'primeng/listbox';
 import { IonicStorageModule } from '@ionic/storage-angular';
 import { PickLangBoxComponent } from '../shared/pick-lang-box/pick-lang-box.component';
+import { ToastModule } from 'primeng/toast';
+import { ButtonModule } from 'primeng/button';
+import { RippleModule } from 'primeng/ripple';
+
+
 @NgModule({
   imports: [
     DropdownModule,
     CommonModule,
     FormsModule,
     IonicStorageModule,
+    ToastModule,
+    ButtonModule,
     TranslocoRootModule,
     PickLangBoxComponent,
     IonicModule,
+    RippleModule,
     HomePageRoutingModule
   ],
   declarations: [HomePage]
