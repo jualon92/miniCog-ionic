@@ -26,3 +26,14 @@ ol > li, ul > li {
   margin-top:8px;
 }
 
+
+//more than laptop
+@media screen and (min-width: 768px) {
+
+    ion-content div {
+      padding-left: 15%;
+      padding-right: 15%;
+      padding-top:1.5%;
+    }
+
+}
