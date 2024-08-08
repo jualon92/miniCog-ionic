@@ -6,7 +6,6 @@
   "display": "minimal-ui",
   "orientation": "portrait",
   "lang": "en",
-
   "scope": "./",
   "start_url": "./",
   "description": "Quick screening for early dementia detection",
