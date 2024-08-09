@@ -17,7 +17,7 @@ import { MessageService } from 'primeng/api';
 })
 export class HomePage implements OnInit, AfterViewInit {
   displayLangOptions = false;
-  NO_LANG_CACHE = true;
+  NO_LANG_CACHE = false;
 
   constructor(
     private translocoService: TranslocoService,
