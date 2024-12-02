@@ -4,7 +4,7 @@ import {
   Component,
   OnInit,
 } from '@angular/core';
-import { TranslocoService } from '@jsverse/transloco';
+import { getBrowserLang, TranslocoService } from '@jsverse/transloco';
 import { Storage } from '@ionic/storage-angular';
 import { MessageService } from 'primeng/api';
 
@@ -26,7 +26,7 @@ export class HomePage implements OnInit, AfterViewInit {
   ) {}
 
   async ngOnInit() {
-    await this.storage.create();
+    await this.storage.create(); 
     this.handleAppLang();
   }
 
@@ -40,31 +40,18 @@ export class HomePage implements OnInit, AfterViewInit {
       this.messageService.add({
         severity: 'warn',
         summary: 'Info',
-        detail: 'Recommended to view on mobile device',
+        detail: 'laptop view under construction. Please use mobile view',
       });
     }
   }
 
   async handleAppLang() {
-    if (this.NO_LANG_CACHE) {
-      await this.storage.clear();
-      this.displayLangOptions = true;
-      return;
-    }
-
-    const selectedLang = await this.storage.get('selectedLang');
-    if (selectedLang) {
-      this.translocoService.setActiveLang(selectedLang);
-      console.log('lang already active: ', selectedLang);
-    } else {
-      console.log('no active lang, showing modal');
-      this.displayLangOptions = true;
-    }
+    
+    const code = getBrowserLang() ?? "en" ;
+    console.log("c",code)
+    this.translocoService.setActiveLang(code );
+ 
   }
 
-  handleLangSelection(code: string) {
-    this.storage.set('selectedLang', code);
-    this.translocoService.setActiveLang(code);
-    this.displayLangOptions = false;
-  }
+ 
 }
