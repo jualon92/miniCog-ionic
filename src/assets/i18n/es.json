@@ -28,7 +28,7 @@
     "DESCRIPTION": "En esta parte del test, le pedirás a la persona que recuerde tres palabras. Dirás las palabras una a una y le pedirás a la persona que las repita. Después de haber dicho las tres palabras, pídele a la persona que las repita nuevamente. Si la persona puede recordar las tres palabras, pasará a la siguiente parte del test.",
     "REPEAT": "Repite las palabras si es necesario, pero no proporciones información adicional ni pistas.",
     "UNABLE_REPEAT": "Si la persona no puede repetir las palabras después de tres intentos, pasa al Paso 2 (dibujo del reloj).",
-    "CONTINUE": "Listo. Ir al siguiente paso",
+    "CONTINUE": "Siguiente paso",
     "ASK_REPEAT": "Después de haber dicho las tres palabras, pida a la persona que las repita.",
     "WORDS_ARE": "Las palabras son:",
     "LOOK": "Mire a la persona directamente y diga:",
@@ -44,7 +44,7 @@
     "DESCRIPTION": "Déle a la persona una hoja de papel en blanco y un bolígrafo o lápiz.",
     "CIRCLE_PAPER": "Es aceptable proporcionar una hoja de papel con el círculo ya dibujado para la persona.",
     "REQUEST": "Diga: “A continuación, quiero que dibuje un reloj para mí. Primero, ponga todos los números donde van.”",
-    "DRAW_HOUR": "Cuando eso esté completo, diga: “Ahora, ponga las manecillas en las 10 y 10.”",
+    "DRAW_HOUR": "Cuando eso esté completo, diga: “Ahora, ponga las manecillas en las 11 y 10.”",
     "REPEAT_INFO": "Repita las instrucciones según sea necesario, ya que esto no es una prueba de memoria.",
     "UNABLE_DRAW": "Pase al paso 3 si el reloj no está completo en tres minutos.",
     "CONTINUE": "siguiente paso."
