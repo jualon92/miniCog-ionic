@@ -33,9 +33,21 @@
     "WORDS_ARE": "Las palabras son:",
     "LOOK": "Mire a la persona directamente y diga:",
     "PLEASE_LISTEN": "“Por favor, escuche con atención. Voy a decir tres palabras que quiero que repita ahora y trate de recordar. ",
-    "WORD_1": "Banana",
-    "WORD_2": "Sol",
-    "WORD_3": "Silla"
+    "WORD_SET_1": {
+      "FIRST": "Banana",
+      "SECOND": "Sol",
+      "THIRD": "Silla"
+    },
+    "WORD_SET_2": {
+      "FIRST": "Líder ",
+      "SECOND": "Temporada",
+      "THIRD": "Mesa"
+    },
+    "WORD_SET_3": {
+      "FIRST": "Pueblo",
+      "SECOND": "Cocina",
+      "THIRD": "Bebe"
+    }
 
   }
   ,
@@ -44,7 +56,7 @@
     "DESCRIPTION": "Déle a la persona una hoja de papel en blanco y un bolígrafo o lápiz.",
     "CIRCLE_PAPER": "Es aceptable proporcionar una hoja de papel con el círculo ya dibujado para la persona.",
     "REQUEST": "Diga: “A continuación, quiero que dibuje un reloj para mí. Primero, ponga todos los números donde van.”",
-    "DRAW_HOUR": "Cuando eso esté completo, diga: “Ahora, ponga las manecillas en las 11 y 10.”",
+    "DRAW_HOUR": "Cuando eso esté completo, diga: “Ahora, ponga las manecillas en las 11:10.”",
     "REPEAT_INFO": "Repita las instrucciones según sea necesario, ya que esto no es una prueba de memoria.",
     "UNABLE_DRAW": "Pase al paso 3 si el reloj no está completo en tres minutos.",
     "CONTINUE": "siguiente paso."
