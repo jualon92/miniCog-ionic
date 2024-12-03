@@ -24,12 +24,29 @@
 
         <li> {{t("SCORE_WORDS.WRITE_DOWN")}} </li>
 
-
+        <!--TODO: good component candidate-->
         <p> {{t("SCORE_WORDS.PICKED_WORDS")}} </p>
-        <ol>
-          <li> {{t("WORD_RECALL.WORD_1")}} </li>
-          <li> {{t("WORD_RECALL.WORD_2")}} </li>
-          <li> {{t("WORD_RECALL.WORD_3")}} </li>
+
+ 
+        <ol  [ngSwitch]="timesVisited">
+            <span *ngSwitchCase="0"> 
+        <li> {{t("WORD_RECALL.WORD_SET_1.FIRST")}} </li>
+        <li>  {{t("WORD_RECALL.WORD_SET_1.SECOND")}}</li>
+       <li>   {{t("WORD_RECALL.WORD_SET_1.THIRD")}}</li>
+      </span>
+      <span *ngSwitchCase="1"> 
+        <li> {{t("WORD_RECALL.WORD_SET_2.FIRST")}} </li>
+        <li>  {{t("WORD_RECALL.WORD_SET_2.SECOND")}}</li>
+       <li>   {{t("WORD_RECALL.WORD_SET_2.THIRD")}}</li>
+
+      </span>
+      <span *ngSwitchCase="2"> 
+        <li> {{t("WORD_RECALL.WORD_SET_3.FIRST")}} </li>
+        <li>  {{t("WORD_RECALL.WORD_SET_3.SECOND")}}</li>
+       <li>   {{t("WORD_RECALL.WORD_SET_3.THIRD")}}</li>
+       
+      </span>
+
         </ol>
 
       </ol>
