@@ -10,6 +10,7 @@ import { ScoringPage } from './scoring.page';
 import { ButtonModule } from 'primeng/button';
 import { MessagesModule } from 'primeng/messages';
 import { TranslocoRootModule } from 'src/app/transloco-root.module';
+import { InputNumberModule } from 'primeng/inputnumber';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { TranslocoRootModule } from 'src/app/transloco-root.module';
     TranslocoRootModule,
     MessagesModule,
     ButtonModule,
+    InputNumberModule,
     ScoringPageRoutingModule
   ],
   declarations: [ScoringPage]
