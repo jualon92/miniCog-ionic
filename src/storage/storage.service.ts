@@ -46,7 +46,8 @@ export class StorageService {
     
     const state = { 
       wordPoints: await this.getWordPoints(),
-      clockPoints: await this.getClockPoints()
+      clockPoints: await this.getClockPoints(),
+      date: new Date()
     }
     this.addToArray(HISTORY, state);
   }
