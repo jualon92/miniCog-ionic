@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco-root.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { IonicStorageModule, Storage } from '@ionic/storage-angular';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +17,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     BrowserAnimationsModule,
     HttpClientModule,
     TranslocoRootModule,
+    IonicStorageModule.forRoot(),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: true,
       // Register the ServiceWorker as soon as the application is stable
