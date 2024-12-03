@@ -7,27 +7,52 @@ import {
 import { getBrowserLang, TranslocoService } from '@jsverse/transloco';
 import { Storage } from '@ionic/storage-angular';
 import { MessageService } from 'primeng/api';
+import { StorageService } from 'src/storage/storage.service';
+import { TIMES_DONE } from 'src/storage/storage.entities';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
-  providers: [Storage, MessageService],
+  providers: [ MessageService, StorageService],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomePage implements OnInit, AfterViewInit {
   displayLangOptions = false;
   NO_LANG_CACHE = false;
+  MAX_TIMES = 2;
 
   constructor(
     private translocoService: TranslocoService,
-    private storage: Storage,
+    private storage: StorageService,
     private messageService: MessageService
   ) {}
 
-  async ngOnInit() {
-    await this.storage.create(); 
+  async ngOnInit() { 
     this.handleAppLang();
+    
+   
+  }
+
+  async ionViewWillEnter() {
+    this.getTimesDone();
+  }
+
+  areMaxTimesDone(timesDone: number) {
+    return timesDone === this.MAX_TIMES;
+  }
+
+  //TODO: move to service, has nothing to do with DOM
+  async getTimesDone() {
+    let timesDone = await this.storage.getTimesDone(); 
+    //reset to 0 if max times done or not set
+    if (timesDone ===  null ||   this.areMaxTimesDone(timesDone)) {
+      timesDone = 0;
+      this.storage.setTimesDone(timesDone);
+      return;
+    } 
+    timesDone++
+    this.storage.setTimesDone(timesDone);
   }
 
   ngAfterViewInit() {
