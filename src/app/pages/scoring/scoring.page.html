@@ -62,8 +62,26 @@
       </p-messages>
     </div>
 
+    <div style="display:flex;justify-content: center;">
+      <p-inputNumber 
+      [(ngModel)]="value1" 
+      [style]=""
+      [showButtons]="true" 
+      buttonLayout="horizontal"
+      spinnerMode="horizontal" 
+      inputId="vertical" 
+      min="0"
+      max="3"
+      (ngModelChange)="onValueChange($event)"
+      decrementButtonClass="p-button-secondary"
+      incrementButtonClass="p-button-secondary" 
+      incrementButtonIcon="pi pi-plus" 
+      decrementButtonIcon="pi pi-minus" />
+    </div>
+    
+
     <div class="ion-text-center">
-      <ion-button  aria-label="continue"   [routerLink]="['/score-clock']"> {{t("SCORE_WORDS.CONTINUE")}} </ion-button>
+      <ion-button [disabled]="value1 < 3"  aria-label="continue"   [routerLink]="['/score-clock']"> {{t("SCORE_WORDS.CONTINUE")}} </ion-button>
     </div>
   </ion-content>
 
