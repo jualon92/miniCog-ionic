@@ -27,7 +27,7 @@ export class ScoringPage implements OnInit  {
      
     
   }
-//TODO: considerar saving points when navigating to next page
+//TODO: consider saving points when navigating to next page
   onValueChange(event: any){
     setTimeout(() => {
       this.storage.setWordPoints(event);  
