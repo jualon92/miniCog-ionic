@@ -9,6 +9,7 @@ import { StorageService } from 'src/storage/storage.service';
 })
 export class ScoringPage implements OnInit  {
   timesVisited: number = 0;
+  value1: number = 0;
   constructor(
     private storage: StorageService,
   ) { }
@@ -25,6 +26,14 @@ export class ScoringPage implements OnInit  {
  
      
     
+  }
+//TODO: considerar saving points when navigating to next page
+  onValueChange(event: any){
+    setTimeout(() => {
+      this.storage.setWordPoints(event);  
+    }, 1);
+    
+ 
   }
 
  
