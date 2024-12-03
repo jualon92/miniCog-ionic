@@ -56,7 +56,7 @@
     "DESCRIPTION": "Déle a la persona una hoja de papel en blanco y un bolígrafo o lápiz.",
     "CIRCLE_PAPER": "Es aceptable proporcionar una hoja de papel con el círculo ya dibujado para la persona.",
     "REQUEST": "Diga: “A continuación, quiero que dibuje un reloj para mí. Primero, ponga todos los números donde van.”",
-    "DRAW_HOUR": "Cuando eso esté completo, diga: “Ahora, ponga las manecillas en las 11:10.”",
+    "DRAW_HOUR": "Cuando eso esté completo, diga: “Ahora, ponga las manecillas en las",
     "REPEAT_INFO": "Repita las instrucciones según sea necesario, ya que esto no es una prueba de memoria.",
     "UNABLE_DRAW": "Pase al paso 3 si el reloj no está completo en tres minutos.",
     "CONTINUE": "siguiente paso."
