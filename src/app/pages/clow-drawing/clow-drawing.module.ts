@@ -10,6 +10,7 @@ import { ClowDrawingPage } from './clow-drawing.page';
 import { MessagesModule } from 'primeng/messages';
 import { ButtonModule } from 'primeng/button';
 import { TranslocoRootModule } from 'src/app/transloco-root.module';
+import { InputNumberModule } from 'primeng/inputnumber';
 
 @NgModule({
   imports: [
@@ -19,7 +20,7 @@ import { TranslocoRootModule } from 'src/app/transloco-root.module';
     TranslocoRootModule,
     ClowDrawingPageRoutingModule,
     MessagesModule,
-    ButtonModule,
+    ButtonModule 
   ],
   declarations: [ClowDrawingPage]
 })
