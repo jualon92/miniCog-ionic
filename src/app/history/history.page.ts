@@ -7,17 +7,17 @@ import { StorageService } from 'src/storage/storage.service';
   styleUrls: ['./history.page.scss'],
   providers: [StorageService],
 })
-export class HistoryPage implements OnInit {
+export class HistoryPage {
   data:any;
   constructor(public storage: StorageService) { }
 
-  async ngOnInit() {
-    setTimeout(() => {
-      this.data = this.storage.getHistory();
-    }, 1);
-    
-  }
+ 
 
-  
+  async ionViewWillEnter() {
+    setTimeout(async () => {
+      this.data = await this.storage.getHistory()
+ 
+    }, 1);
+  }
 
 }

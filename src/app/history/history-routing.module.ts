@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HistoryPage } from './history.page';
-
+import { TableModule } from 'primeng/table';
 const routes: Routes = [
   {
     path: '',
@@ -12,6 +12,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule,
+    TableModule,
+  ],
 })
 export class HistoryPageRoutingModule {}
