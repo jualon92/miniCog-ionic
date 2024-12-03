@@ -48,12 +48,38 @@
       </ng-template>
     </p-messages>
 
+<!-- 
+    <div>  
+    <p-radioButton 
+    name="pizza" 
+    value="0" 
+    [(ngModel)]="clockPoints" 
+    inputId="ingredient1" />
+<label for="ingredient1" class="ml-2">
+    0 point
+</label>
+
+<p-radioButton 
+name="pizza" 
+value="2" 
+[(ngModel)]="clockPoints" 
+inputId="ingredient1" />
+<label for="ingredient1" class="ml-2">
+2 points
+</label>
+</div> -->
+
 
 
   </div>
-  <div class="ion-text-center">
-    <ion-button aria-label="continue"   [routerLink]="['/results']">{{t("SCORE_CLOCK.CONTINUE")}}</ion-button>
+  <div class="ion-text-center  ">
+    <ion-button     (click)="navigate(0)"  aria-label="continue"   >+0 Points.  {{t("SCORE_CLOCK.CONTINUE")}}</ion-button>
   </div>
+
+  <div class="ion-text-center ">
+    <ion-button  (click)="navigate(2)"  aria-label="continue"   >+ 2 Points. {{t("SCORE_CLOCK.CONTINUE")}}</ion-button>
+  </div>
+
 </ion-content>
 
 </ng-container>
