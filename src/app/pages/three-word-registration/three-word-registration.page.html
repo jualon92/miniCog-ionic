@@ -18,9 +18,28 @@
     </p>
       <h2> {{t("WORD_RECALL.WORDS_ARE")}} </h2>
    <ul aria-label="word list" >
-    <li> {{t("WORD_RECALL.WORD_1")}} </li>
-    <li>  {{t("WORD_RECALL.WORD_2")}}</li>
-      <li>   {{t("WORD_RECALL.WORD_3")}}</li>
+
+ 
+    <li [ngSwitch]="timesVisited  ">
+      <span *ngSwitchCase="0"> 
+        <li> {{t("WORD_RECALL.WORD_SET_1.FIRST")}} </li>
+        <li>  {{t("WORD_RECALL.WORD_SET_1.SECOND")}}</li>
+       <li>   {{t("WORD_RECALL.WORD_SET_1.THIRD")}}</li>
+      </span>
+      <span *ngSwitchCase="1"> 
+        <li> {{t("WORD_RECALL.WORD_SET_2.FIRST")}} </li>
+        <li>  {{t("WORD_RECALL.WORD_SET_2.SECOND")}}</li>
+       <li>   {{t("WORD_RECALL.WORD_SET_2.THIRD")}}</li>
+      </span>
+      <span *ngSwitchCase="2"> 
+        <li> {{t("WORD_RECALL.WORD_SET_3.FIRST")}} </li>
+        <li>  {{t("WORD_RECALL.WORD_SET_3.SECOND")}}</li>
+       <li>   {{t("WORD_RECALL.WORD_SET_3.THIRD")}}</li>
+      </span>
+
+      <span *ngSwitchDefault> {{t("WORD_RECALL.DEFAULT_WORD")}} </span>
+    </li>
+     
    </ul>
 
 
