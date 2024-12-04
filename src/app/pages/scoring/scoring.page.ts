@@ -40,7 +40,7 @@ export class ScoringPage implements OnInit  {
 
   navigate(points: number){
     this.storage.setWordPoints(points);
-    this.storage.saveState();
+    /* this.storage.saveState(); */
     setTimeout(() => {
       this.router.navigate(['/score-clock']);
     }, 1);
