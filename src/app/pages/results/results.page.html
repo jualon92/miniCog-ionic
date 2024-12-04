@@ -18,13 +18,17 @@
             
    <!--  <h2>{{t("RESULTS.BRIEF_DESCRIPTION")}}</h2>
   -->
-   <div>
+    
     <h2>Score</h2>
+    <div style="display:flex; justify-content: center;"> 
     <div>world recall: {{threeWordRecallPoints}}</div>
     <div>clock drawing: {{clockDrawingPoints}}</div>
-    <div>total score : <b> {{threeWordRecallPoints + clockDrawingPoints}}</b> </div>
-   </div>  
+    <div>total score : <b> {{threeWordRecallPoints + clockDrawingPoints}}</b>
+    </div> </div>
+    
 
+    <ion-item-divider></ion-item-divider>
+   <h2>Interpretation</h2>
     <ul aria-label="cut-point">
         <li [innerHTML]="t('RESULTS.CUT_POINT') | safeHTML">  </li>
        
