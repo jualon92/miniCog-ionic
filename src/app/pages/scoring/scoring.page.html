@@ -62,7 +62,7 @@
       </p-messages>
     </div>
 
-    <div style="display:flex;justify-content: center;">
+ <!--    <div style="display:flex;justify-content: center;">
       <p-inputNumber 
       [(ngModel)]="value1" 
       [style]=""
@@ -77,12 +77,36 @@
       incrementButtonClass="p-button-secondary" 
       incrementButtonIcon="pi pi-plus" 
       decrementButtonIcon="pi pi-minus" />
+    </div> -->
+    <div style=" 
+    display:flex;
+        justify-content: center; margin-bottom:1rem">
+
+   
+    <div class="ion-text-center btn-guess  ">
+      <ion-button     (click)="navigate(0)"  aria-label="continue"   >0 guess </ion-button>
+    </div>
+  
+    <div class="ion-text-center  btn-guess ">
+      <ion-button  (click)="navigate(1)"  aria-label="continue"   >1 guess </ion-button>
     </div>
     
-
-    <div class="ion-text-center">
-      <ion-button [disabled]="value1 < 3"  aria-label="continue"   [routerLink]="['/score-clock']"> {{t("SCORE_WORDS.CONTINUE")}} </ion-button>
+     </div>
+    <div style=" display:flex;
+        justify-content: center">  
+     <div class="ion-text-center   btn-guess ">
+      <ion-button     (click)="navigate(2)"  aria-label="continue"   >2 guess </ion-button>
     </div>
+  
+    <div class="ion-text-center   btn-guess">
+      <ion-button  (click)="navigate(3)"  aria-label="continue"   >3 guess </ion-button>
+    </div>
+
+  </div>
+
+    <!-- <div class="ion-text-center">
+      <ion-button [disabled]="value1 "  aria-label="continue"   [routerLink]="['/score-clock']"> {{t("SCORE_WORDS.CONTINUE")}} </ion-button>
+    </div> -->
   </ion-content>
 
 </ng-container>

@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { StorageService } from 'src/storage/storage.service';
 
 @Component({
@@ -8,10 +9,11 @@ import { StorageService } from 'src/storage/storage.service';
   providers: [StorageService],
 })
 export class ScoringPage implements OnInit  {
-  timesVisited: number = 0;
+  timesVisited: number = -1;
   value1: number = 0;
   constructor(
     private storage: StorageService,
+    private router: Router
   ) { }
 
  
@@ -34,6 +36,15 @@ export class ScoringPage implements OnInit  {
     }, 1);
     
  
+  }
+
+  navigate(points: number){
+    this.storage.setWordPoints(points);
+    this.storage.saveState();
+    setTimeout(() => {
+      this.router.navigate(['/score-clock']);
+    }, 1);
+  
   }
 
  
