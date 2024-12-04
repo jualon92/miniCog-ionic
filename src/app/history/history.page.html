@@ -31,24 +31,26 @@
 </ion-grid>
  -->
 
-<p-table *ngIf="data"  [value]="data"  [tableStyle]="{'padding-left':'0', 'padding-right': '0'}" >
+<p-table *ngIf="data"  [value]="data"    styleClass="p-datatable-striped p-datatable-sm"   [tableStyle]="{'padding-left':'0', 'padding-right': '0'}" >
   <ng-template pTemplate="header">
       <tr>
-        <th>id</th>
+<!--   <th>id</th>   -->
           <th>Word recall</th>
           <th>Clock drawing</th>
           <th>Score</th>
           <th>Date</th>
+          <th>remove</th>
       </tr>
   </ng-template>
   <ng-template pTemplate="body" let-item let-rowIndex="rowIndex">
       <tr>
-        <td>{{rowIndex}}</td>
+        <!-- <td>{{rowIndex}}</td>   -->
           <td>{{item.wordPoints}}</td>
-          <td>{{ item.clockPoints }}</td>
-          <td>{{item.wordPoints + item.clockPoints}}</td>
-          <td>{{item.date | date: "dd/MM/yy HH:mm "}}</td>
-      </tr>
+          <td>   {{ item.clockPoints }}  </td>
+          <td> <b>  {{item.wordPoints + item.clockPoints}} </b></td>
+          <td>{{item.date | date: "dd/MM/yy HH:mm "}}</td> 
+          <td> <p-button (onClick)="removeItem(rowIndex)" icon="pi pi-trash" [rounded]="true" [text]="true" severity="warning" /> </td>
+        </tr>
   </ng-template>
 </p-table>
 

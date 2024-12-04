@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HistoryPage } from './history.page';
 import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
 const routes: Routes = [
   {
     path: '',
@@ -13,6 +14,7 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule,
+    ButtonModule,
     TableModule,
   ],
 })

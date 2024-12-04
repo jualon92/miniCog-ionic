@@ -14,10 +14,20 @@ export class HistoryPage {
  
 
   async ionViewWillEnter() {
+    console.log("pepi")
     setTimeout(async () => {
       this.data = await this.storage.getHistory()
  
     }, 1);
+  }
+
+  async removeItem(index: number){ ;
+    setTimeout(async () => {
+       this.storage.removeHistoryItem(index);
+       this.data.splice(index, 1);
+    }, 1);
+    
+    
   }
 
 }
