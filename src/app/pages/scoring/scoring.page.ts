@@ -23,7 +23,7 @@ export class ScoringPage implements OnInit  {
     setTimeout(async () => {
       this.timesVisited = await this.storage.getTimesDone();
  
-    }, 100);
+    }, 1);
       
  
      

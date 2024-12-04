@@ -19,7 +19,7 @@ export class ResultsPage implements OnInit {
       setTimeout(async () => {
         this.threeWordRecallPoints = await  this.storage.getWordPoints();
         this.clockDrawingPoints = await this.storage.getClockPoints() ?? 0; 
-      }, 100);
+      }, 1);
   }
 
 
