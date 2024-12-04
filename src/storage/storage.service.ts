@@ -20,6 +20,12 @@ export class StorageService {
     this._storage = storage;
   }
 
+  removeHistoryItem(index: any){
+    this._storage?.get(HISTORY).then((history) => {
+      history.splice(index, 1);
+      this._storage?.set(HISTORY, [...history]);
+    });
+  }
   getTimesDone(){
     return this._storage?.get(TIMES_DONE);
   }
@@ -50,6 +56,7 @@ export class StorageService {
       clockPoints: await this.getClockPoints(),
       date: new Date()
     }
+    console.log("state", state)
     this.addToArray(HISTORY, state);
   }
 
