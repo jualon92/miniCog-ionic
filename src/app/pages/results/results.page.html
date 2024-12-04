@@ -22,7 +22,7 @@
     <h2>Score</h2>
     <div>world recall: {{threeWordRecallPoints}}</div>
     <div>clock drawing: {{clockDrawingPoints}}</div>
-    <div>total score : {{threeWordRecallPoints + clockDrawingPoints}}</div>
+    <div>total score : <b> {{threeWordRecallPoints + clockDrawingPoints}}</b> </div>
    </div>  
 
     <ul aria-label="cut-point">
@@ -33,7 +33,11 @@
   </div>
 
   <div class="ion-text-center">
-    <ion-button  aria-label="redo the test"  [routerLink]="['']">{{t("RESULTS.CONTINUE")}}</ion-button> 
+    <ion-button style="width:168.7px; margin-bottom:1rem; margin-top:1rem" aria-label="redo the test"  [routerLink]="['']">{{t("RESULTS.CONTINUE")}}</ion-button> 
+  </div>
+
+  <div class="ion-text-center">
+    <ion-button  style="width:168.7px" arial-label="continue" [routerLink]="['/history']" color="success"> ver historial </ion-button>
   </div>
 
 </ion-content>
