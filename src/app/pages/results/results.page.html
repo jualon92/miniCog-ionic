@@ -16,7 +16,15 @@
               
           
             
-    <h2>{{t("RESULTS.BRIEF_DESCRIPTION")}}</h2>
+   <!--  <h2>{{t("RESULTS.BRIEF_DESCRIPTION")}}</h2>
+  -->
+   <div>
+    <h2>Score</h2>
+    <div>world recall: {{threeWordRecallPoints}}</div>
+    <div>clock drawing: {{clockDrawingPoints}}</div>
+    <div>total score : {{threeWordRecallPoints + clockDrawingPoints}}</div>
+   </div>  
+
     <ul aria-label="cut-point">
         <li [innerHTML]="t('RESULTS.CUT_POINT') | safeHTML">  </li>
        
