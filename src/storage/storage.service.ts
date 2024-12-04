@@ -7,6 +7,7 @@ import { CLOCK_KEY, ClockPoints, HISTORY, TIMES_DONE, WORD_KEY } from './storage
   providedIn: 'root'
 })
 export class StorageService {
+ 
   private _storage: Storage | null = null;
 
   constructor(private storage: Storage) {
@@ -43,8 +44,8 @@ export class StorageService {
   }
 
   async saveState(){
-    
-    const state = { 
+
+    const state = {
       wordPoints: await this.getWordPoints(),
       clockPoints: await this.getClockPoints(),
       date: new Date()
@@ -61,9 +62,11 @@ export class StorageService {
     await this._storage?.set(key, currentArray);
   }
 
-
+  //TODO: refactor
   getHistory(){
-    return this._storage?.get(HISTORY);
+    return this._storage?.get(HISTORY).then((history) => {
+       return history.sort((a:any, b:any) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    });
   }
   // Create and expose methods that users of this service can
   // call, for example:
