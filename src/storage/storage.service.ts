@@ -21,9 +21,10 @@ export class StorageService {
   }
 
   removeHistoryItem(index: any){
-    this._storage?.get(HISTORY).then((history) => {
+    this.getHistory()?.then(async (history) => {
       history.splice(index, 1);
-      this._storage?.set(HISTORY, [...history]);
+      await this._storage?.set(HISTORY, [...history])
+      
     });
   }
   getTimesDone(){
