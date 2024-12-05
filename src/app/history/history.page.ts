@@ -14,7 +14,6 @@ export class HistoryPage {
  
 
   async ionViewWillEnter() {
-    console.log("pepi")
     setTimeout(async () => {
       this.data = await this.storage.getHistory()
  

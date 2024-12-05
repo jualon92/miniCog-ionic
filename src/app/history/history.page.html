@@ -31,7 +31,7 @@
 </ion-grid>
  -->
 
-<p-table *ngIf="data"  [value]="data"    styleClass="p-datatable-striped p-datatable-sm"   [tableStyle]="{'padding-left':'0', 'padding-right': '0'}" >
+<p-table *ngIf="data && data.length > 0; else noData"  [value]="data"    styleClass="p-datatable-striped p-datatable-sm"   [tableStyle]="{'padding-left':'0', 'padding-right': '0'}" >
   <ng-template pTemplate="header">
       <tr>
 <!--   <th>id</th>   -->
@@ -54,6 +54,12 @@
   </ng-template>
 </p-table>
 
+
+<ng-template #noData>
+  <div class="ion-text-center"  style="color:grey; margin-top:0.5rem">
+    <p>No se han cargados datos aun. Termina un test para verlo aqui</p>
+  </div>
+</ng-template>
 
   <div class="ion-text-center" style="margin-top:1rem">
     <ion-button aria-label="continue" [routerLink]="['']">go back</ion-button>
