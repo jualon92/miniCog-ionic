@@ -27,6 +27,10 @@ export class StorageService {
       
     });
   }
+
+  clear(){
+    this._storage?.clear();
+  }
   getTimesDone(){
     return this._storage?.get(TIMES_DONE);
   }
