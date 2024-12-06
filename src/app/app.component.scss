@@ -8,3 +8,30 @@
         /* CSS to Reset */
     }
 }
+
+:host ::ng-deep {
+  //target smartphones
+  @media screen and (min-width: 1150px) and (pointer:fine) {
+    .p-message.p-message-info, .p-message-wrapper,  .p-message.p-message-contrast {
+      padding-left:0!important;
+      padding-right: 0!important;
+      padding-top:1%;
+      width: 600px;
+    } 
+
+    .x-center{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; 
+    }
+   
+  
+  }
+
+ 
+
+}
+ 
+ 
+
