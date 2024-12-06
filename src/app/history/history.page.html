@@ -65,6 +65,10 @@
     <ion-button aria-label="continue" [routerLink]="['']">go back</ion-button>
   </div>
 
+  <div class="ion-text-center" style="margin-top:1rem;margin-bottom:1rem;">
+    <ion-button aria-label="continue" color="warning"  (click)="this.storage.clear()">Limpiar datos</ion-button>
+  </div>
+
 </ion-content>
 
 
