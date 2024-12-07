@@ -28,7 +28,14 @@
       "DESCRIPTION": "In this part of the test, you will ask the person to remember three words. You will say the words one at a time and ask the person to repeat them. After you have said all three words, ask the person to repeat them again. If the person can remember all three words, they will move on to the next part of the test.",
       "REPEAT": "Repeat the words if necessary, but do not provide any additional information or cues.",
       "UNABLE_REPEAT":"If the person is unable to repeat the words after three attempts, move on to Step 2 (clock drawing)..",
-      "CONTINUE": "Done. Go to step 2"
+      "CONTINUE": "Done. Go to step 2",
+        "ASK_REPEAT": "After saying the three words, ask the person to repeat them.",
+        "WORDS_ARE": "The words are:",
+        "LOOK": "Look at the person directly and say:",
+        "PLEASE_LISTEN": "“Please listen carefully. I am going to say three words that I want you to repeat now and try to remember.",
+        "WORD_1": "Banana",
+        "WORD_2": "Sun",
+        "WORD_3": "Chair"  
     },
     "CLOCK_DRAWING":{
       "TITLE": "Clock Drawing",
