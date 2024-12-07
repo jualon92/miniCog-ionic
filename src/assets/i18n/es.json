@@ -1,9 +1,11 @@
 {
+  "SEE_HISTORY": "Ver historial",
+  "READ_MORE_BUTTON": "Leer más acerca del Test",
   "HOME": {
     "FAQ": "FAQ - Mini Cog",
     "WHAT_IS_APP": {
       "TITLE": "¿Qué es esta app?",
-      "DESCRIPTION": "Esta es una aplicación que te guiará paso a paso para realizar la prueba Mini Cog con un ser querido."
+      "DESCRIPTION": "Esta  aplicación te guiará paso a paso para realizar la prueba Mini Cog con un ser querido."
     },
     "WHAT_IS_MINICOG": {
       "TITLE": "¿Qué es el Mini Cog?",
@@ -84,6 +86,11 @@
     "BRIEF_DESCRIPTION": "Puntuación total = Puntuación de Recuerdo de Palabras + Puntuación de Dibujo del Reloj.",
     "CUT_POINT": "Un punto de corte de <b>menos de 3</b> en el Mini-Cog™ ha sido validado para la detección de demencia, pero muchas personas con deterioro cognitivo clínicamente significativo obtendrán una puntuación más alta.",
     "INTERPRETATION": "Cuando se desea una mayor sensibilidad, se recomienda un punto de corte de <b>menos de 4</b>, ya que puede indicar la necesidad de una evaluación adicional del estado cognitivo.",
-    "CONTINUE": "REHACER prueba."
+    "CONTINUE": "REHACER prueba.",
+    "WORD_RECALL": "Palabras recordadas",
+    "CLOCK_DRAWING": "Dibujo del reloj",
+    "TOTAL_SCORE": "Puntuación total",
+    "SCORE": "Puntuación",
+    "INTERPRETATION_LABEL": "Interpretación"
   }
 }
