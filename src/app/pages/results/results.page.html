@@ -40,10 +40,8 @@
     <ion-button style="width:168.7px; margin-bottom:1rem; margin-top:1rem" aria-label="redo the test"  [routerLink]="['']">{{t("RESULTS.CONTINUE")}}</ion-button> 
   </div>
 
-  <div class="ion-text-center">
-    <ion-button  style="width:168.7px" arial-label="continue" [routerLink]="['/history']" color="success"> {{t('SEE_HISTORY')}}📜 
-         </ion-button>
-  </div>
+  <!-- TODO: go back should be on top-->
+   <app-show-history/>
 
    
     <app-read-more/>

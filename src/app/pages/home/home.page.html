@@ -32,10 +32,7 @@
         <ion-button style="width:168.7px; margin-bottom:1rem" arial-label="continue" [routerLink]="['/before-we-start']">{{t("HOME.START_BUTTON")}}</ion-button>
       </div>
 
-      <div class="ion-text-center">
-        <ion-button  style="width:168.7px" arial-label="continue" [routerLink]="['/history']" color="success">  {{t("SEE_HISTORY")}} 📜 </ion-button>
-      </div>
-
+      <app-show-history/>
     </div>
   </ion-content>
 </ng-container>

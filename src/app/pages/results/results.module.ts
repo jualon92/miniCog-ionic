@@ -10,6 +10,7 @@ import { ResultsPage } from './results.page';
 import { TranslocoRootModule } from 'src/app/transloco-root.module';
 import { SafeHtmlPipe } from 'src/app/safe-html.pipe';
 import { ReadMoreComponent } from '../shared/buttons/read-more/read-more.component';
+import { ShowHistoryComponent } from "../shared/buttons/show-history/show-history.component";
 
 @NgModule({
   imports: [
@@ -18,8 +19,10 @@ import { ReadMoreComponent } from '../shared/buttons/read-more/read-more.compone
     IonicModule,
     ReadMoreComponent,
     TranslocoRootModule,
-    ResultsPageRoutingModule
-  ],
+    ResultsPageRoutingModule,
+    ShowHistoryComponent,
+    ShowHistoryComponent,
+],
   declarations: [ResultsPage,SafeHtmlPipe,  ]
 })
 export class ResultsPageModule {}

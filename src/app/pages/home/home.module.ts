@@ -19,6 +19,7 @@ import { PickLangBoxComponent } from '../shared/pick-lang-box/pick-lang-box.comp
 import { ToastModule } from 'primeng/toast';
 import { ButtonModule } from 'primeng/button';
 import { RippleModule } from 'primeng/ripple';
+import { ShowHistoryComponent } from '../shared/buttons/show-history/show-history.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { RippleModule } from 'primeng/ripple';
     PickLangBoxComponent,
     IonicModule,
     RippleModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    ShowHistoryComponent,
   ],
   declarations: [HomePage]
 })
