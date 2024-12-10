@@ -9,9 +9,9 @@ import { StorageService } from 'src/storage/storage.service';
   providers: [StorageService],
 })
 export class ResultsPage implements OnInit {
-  threeWordRecallPoints:any;
-  clockDrawingPoints: any;
-  total = 0;
+  threeWordRecallPoints : number = 0;
+  clockDrawingPoints  : number  = 0;
+  total  : number  = 0;
 
   constructor(public storage: StorageService) { }
 
