@@ -7,7 +7,7 @@ import { CLOCK_KEY, ClockPoints, HISTORY, TIMES_DONE, WORD_KEY } from './storage
   providedIn: 'root'
 })
 export class StorageService {
- 
+  MAX_TIMES = 2;
   private _storage: Storage | null = null;
 
   constructor(private storage: Storage) {
@@ -19,6 +19,24 @@ export class StorageService {
     const storage = await this.storage.create();
     this._storage = storage;
   }
+
+  async initTimesDone() {
+    let timesDone = await this.getTimesDone(); 
+    //reset to 0 if max times done or not set
+    if (timesDone ===  null ||   this.areMaxTimesDone(timesDone)) {
+      timesDone = 0;
+      this.setTimesDone(timesDone);
+      return;
+    } 
+    timesDone++
+    this.setTimesDone(timesDone);
+  }
+
+  
+  areMaxTimesDone(timesDone: number) {
+    return timesDone === this.MAX_TIMES;
+  }
+
 
   removeHistoryItem(index: any){
     this.getHistory()?.then(async (history) => {
@@ -61,7 +79,6 @@ export class StorageService {
       clockPoints: await this.getClockPoints(),
       date: new Date()
     }
-    console.log("state", state)
     this.addToArray(HISTORY, state);
   }
 
