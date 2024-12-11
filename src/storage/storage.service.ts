@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { Storage } from '@ionic/storage-angular';
-import { CLOCK_KEY, ClockPoints, HISTORY, TIMES_DONE, WORD_KEY } from './storage.entities';
+import { CLOCK_KEY, ClockPoints, HISTORY, HistorySnapshot, TIMES_DONE, WORD_KEY } from './storage.entities';
 
 @Injectable({
   providedIn: 'root'
@@ -37,8 +37,8 @@ export class StorageService {
     return timesDone === this.MAX_TIMES;
   }
 
-
-  removeHistoryItem(index: any){
+  
+  removeHistoryItem(index: number){
     this.getHistory()?.then(async (history) => {
       history.splice(index, 1);
       await this._storage?.set(HISTORY, [...history])
@@ -74,7 +74,7 @@ export class StorageService {
 
   async saveState(){
 
-    const state = {
+    const state : HistorySnapshot = {
       wordPoints: await this.getWordPoints(),
       clockPoints: await this.getClockPoints(),
       date: new Date()
@@ -82,7 +82,7 @@ export class StorageService {
     this.addToArray(HISTORY, state);
   }
 
-  async addToArray(key: string, element: any) {
+  async addToArray(key: string, element: HistorySnapshot) {
     let currentArray = await this._storage?.get(key) || [];
     if (!Array.isArray(currentArray)) {
       currentArray = [];
@@ -93,15 +93,13 @@ export class StorageService {
 
   //TODO: refactor
   getHistory(){
-    return this._storage?.get(HISTORY).then((history) => {
-       return history.sort((a:any, b:any) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    return this._storage?.get(HISTORY).then((history : HistorySnapshot[]) => {
+       return history.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
     });
   }
   // Create and expose methods that users of this service can
   // call, for example:
-  public set(key: string, value: any) {
-    this._storage?.set(key, value);
-  }
+ 
 
   public get(key: string) {
     return this._storage?.get(key);
