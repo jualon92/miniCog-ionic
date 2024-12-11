@@ -7,7 +7,7 @@ import { CLOCK_KEY, ClockPoints, HISTORY, HistorySnapshot, TIMES_DONE, WORD_KEY 
   providedIn: 'root'
 })
 export class StorageService {
-  MAX_TIMES = 2;
+  readonly MAX_TIMES = 2;
   private _storage: Storage | null = null;
 
   constructor(private storage: Storage) {
@@ -20,6 +20,10 @@ export class StorageService {
     this._storage = storage;
   }
 
+  /***
+   *  used to track how many times the user has visited the app
+   * if the user has visited the app the max number of times, the counter is reset to 0
+   */
   async initTimesDone() {
     let timesDone = await this.getTimesDone(); 
     //reset to 0 if max times done or not set
@@ -33,7 +37,7 @@ export class StorageService {
   }
 
   
-  areMaxTimesDone(timesDone: number) {
+  private areMaxTimesDone(timesDone: number) {
     return timesDone === this.MAX_TIMES;
   }
 
@@ -72,6 +76,9 @@ export class StorageService {
     this._storage?.set(WORD_KEY, wordPoints);
   }
 
+  /***
+   * saves the current state of the user's points (clock and word points) and the date
+   */
   async saveState(){
 
     const state : HistorySnapshot = {
@@ -91,14 +98,15 @@ export class StorageService {
     await this._storage?.set(key, currentArray);
   }
 
-  //TODO: refactor
+  /**
+   * get the history of the user's points, sorted by date
+   */
   getHistory(){
     return this._storage?.get(HISTORY).then((history : HistorySnapshot[]) => {
        return history.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
     });
   }
-  // Create and expose methods that users of this service can
-  // call, for example:
+ 
  
 
   public get(key: string) {
