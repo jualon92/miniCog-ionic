@@ -1,4 +1,6 @@
 {
+  "GUESS": "Correctas",
+  "POINTS": "Puntos",
   "SEE_HISTORY": "Ver historial",
   "READ_MORE_BUTTON": "Leer más acerca del Test",
   "HOME": {
@@ -92,5 +94,10 @@
     "TOTAL_SCORE": "Puntuación total",
     "SCORE": "Puntuación",
     "INTERPRETATION_LABEL": "Interpretación"
+  },
+  "HISTORY":{
+    "CLEAN_DATA": "Limpiar datos",
+    "GO_BACK": "Volver",
+    "NO_DATA": "No se han cargados datos aun. Termina un test para verlo aqui"
   }
 }
