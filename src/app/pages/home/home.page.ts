@@ -17,7 +17,7 @@ import { TIMES_DONE } from 'src/storage/storage.entities';
   providers: [ MessageService, StorageService],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomePage implements OnInit, AfterViewInit {
+export class HomePage implements  AfterViewInit {
   displayLangOptions = false;
   NO_LANG_CACHE = false; 
 
@@ -27,11 +27,7 @@ export class HomePage implements OnInit, AfterViewInit {
     private messageService: MessageService
   ) {}
 
-  async ngOnInit() { 
-    this.handleAppLang();
-    
-   
-  }
+
 
   async ionViewWillEnter() {
     this.storage.initTimesDone();
@@ -55,12 +51,7 @@ export class HomePage implements OnInit, AfterViewInit {
     }
   }
 
-  async handleAppLang() {
-    
-    const code = getBrowserLang() ?? "en" ;
-    this.translocoService.setActiveLang(code );
  
-  }
 
  
 }
