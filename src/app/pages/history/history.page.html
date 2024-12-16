@@ -1,3 +1,7 @@
+
+<ng-container *transloco="let t"> 
+
+
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>historial</ion-title>
@@ -57,18 +61,20 @@
 
 <ng-template #noData>
   <div class="ion-text-center"  style="color:grey; margin-top:0.5rem">
-    <p>No se han cargados datos aun. Termina un test para verlo aqui</p>
+    <p>{{t("HISTORY.NO_DATA")}}</p>
   </div>
 </ng-template>
 
   <div class="ion-text-center" style="margin-top:1rem">
-    <ion-button aria-label="continue" [routerLink]="['']">go back</ion-button>
+    <ion-button aria-label="continue" [routerLink]="['']">{{t("HISTORY.GO_BACK")}}</ion-button>
   </div>
 
   <div class="ion-text-center" style="margin-top:1rem;margin-bottom:1rem;">
-    <ion-button aria-label="continue" color="warning"  (click)="this.storage.clear(); this.data = []">Limpiar datos</ion-button>
+    <ion-button aria-label="continue" color="warning"  (click)="this.storage.clear(); this.data = []">{{t("HISTORY.CLEAN_DATA")}}</ion-button>
   </div>
 
 </ion-content>
 
 
+
+</ng-container>

@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HistoryPage } from './history.page';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
+import { TranslocoModule } from '@jsverse/transloco';
 const routes: Routes = [
   {
     path: '',
