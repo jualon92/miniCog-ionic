@@ -22,6 +22,10 @@ import { RippleModule } from 'primeng/ripple';
 import { ShowHistoryComponent } from '../shared/buttons/show-history/show-history.component';
 import { Card, CardModule } from 'primeng/card';
 import { QRCodeModule } from 'angularx-qrcode';
+import { FloatLabelModule } from 'primeng/floatlabel';
+
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { MessagesModule } from 'primeng/messages';
 @NgModule({
   imports: [
     DropdownModule,
@@ -30,8 +34,11 @@ import { QRCodeModule } from 'angularx-qrcode';
     CardModule,
     IonicStorageModule,
     QRCodeModule,
+    MessagesModule,
     ToastModule,
     ButtonModule,
+    FloatLabelModule,
+    InputTextareaModule,
     TranslocoRootModule,
     PickLangBoxComponent,
     IonicModule,

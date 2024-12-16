@@ -2,14 +2,84 @@
   <ion-header [translucent]="true">
     <ion-toolbar>
       <ion-title size="large">{{t("HOME.FAQ")}}</ion-title>
+      <ion-buttons slot="end">
+        <ion-button id="open-modal" expand="block" >
+          <ion-icon slot="icon-only" name="chatbubble-ellipses-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
 
 
 
+ 
 
 
   <ion-content [fullscreen]="true">
+
+      <!-- Modal -->
+      <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+        <ng-template>
+          <ion-header>
+            <ion-toolbar>
+              <ion-buttons slot="start">
+                <ion-button (click)="cancel()">Cancel</ion-button>
+              </ion-buttons>
+              <ion-title>Leave us a comment</ion-title>
+              <ion-buttons slot="end">
+                <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="ion-padding">
+           
+            
+     <!--            <ion-textarea
+                  label="What would make this app better for you?"
+                  labelPlacement="stacked"
+                  type="text"
+                  fill="solid"
+                  placeholder="Share your thoughts..."
+                  [(ngModel)]="feedback"
+                ></ion-textarea>
+            -->
+
+            <h1>Leave us a comment.</h1>
+        
+              <textarea 
+                  rows="10" cols="40" 
+                  [(ngModel)]="value"
+                  placeholder="Share your thoughts... ie: Whats wrong, what is confusing, what you like"	
+                  pInputTextarea>
+               
+              </textarea>
+           
+
+              
+            <!--    <ion-item>
+                <ion-textarea
+                  label="What’s one thing you found confusing or frustrating?"
+                  labelPlacement="stacked"
+                  type="text"
+                  autoGrow="true"
+                  placeholder="Share your thoughts..."
+                  [(ngModel)]="feedbackConfusing"
+                ></ion-textarea>
+              </ion-item> -->
+
+              <p-messages severity="info"   >
+                <ng-template pTemplate>
+                  <p class="privacy-note">
+                    Your feedback is private and will not be shared with anyone.
+                  </p>
+                </ng-template>
+              </p-messages>
+        
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+      
+
 
     <ng-container *ngIf="!isMobile; else mobileView"  >  
     <div class="verification-container">
