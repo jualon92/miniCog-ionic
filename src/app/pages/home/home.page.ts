@@ -54,7 +54,9 @@ export class HomePage implements  AfterViewInit, OnInit {
     }
   }
 
- 
+  ignoreResponsiveWarning(){
+    this.isMobile = true;
+  }
 
  
 }
