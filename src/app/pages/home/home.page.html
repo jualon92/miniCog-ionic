@@ -11,9 +11,12 @@
 
   <ion-content [fullscreen]="true">
 
+    <ng-container *ngIf="!isMobile; else mobileView"  
+    sadasd
+    ></ng-container>
     <div>
 
-
+      <ng-template #mobileView> 
       <ul style="padding-left: 20px;">
         <li>
           <strong> {{t("HOME.WHAT_IS_APP.TITLE")}}</strong>
@@ -33,10 +36,12 @@
       </div>
 
       <app-show-history/>
+    </ng-template>
     </div>
+ 
   </ion-content>
 </ng-container>
-
+ 
 
 <p-toast  [life]="20000" />
 

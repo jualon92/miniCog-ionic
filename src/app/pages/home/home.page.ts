@@ -17,17 +17,20 @@ import { TIMES_DONE } from 'src/storage/storage.entities';
   providers: [ MessageService, StorageService],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomePage implements  AfterViewInit {
+export class HomePage implements  AfterViewInit, OnInit {
   displayLangOptions = false;
   NO_LANG_CACHE = false; 
-
+  isMobile = false;
   constructor(
     private translocoService: TranslocoService,
     private storage: StorageService,
     private messageService: MessageService
   ) {}
 
-
+  ngOnInit(): void {
+    //TODO: make it a service
+      this.isMobile = window.innerWidth < 1024;
+  }
 
   async ionViewWillEnter() {
     this.storage.initTimesDone();
