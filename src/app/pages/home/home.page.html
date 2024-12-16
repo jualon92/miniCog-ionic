@@ -11,9 +11,31 @@
 
   <ion-content [fullscreen]="true">
 
-    <ng-container *ngIf="!isMobile; else mobileView"  
-    sadasd
-    ></ng-container>
+    <ng-container *ngIf="!isMobile; else mobileView"  >  
+    <div class="verification-container">
+      <p-card class="verification-card">
+        <div class="verification-header">
+          <h2>Usa tu dispositivo móvil para esta app</h2>
+          <p>Esta aplicación está optimizada para dispositivos móviles. Para la mejor experiencia, escanea el QR con tu móvil..</p>
+          <p>Para la mejor experiencia, escanea el QR con tu móvil..</p>
+
+        </div>
+        
+        <!-- QR Code -->
+        <div class="qr-section">
+          <qrcode style="display: flex
+          ;
+              justify-content: center;" qrdata="https://mini-cog-test.web.app/" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+        </div>
+        
+
+       <div class="ion-text-center">
+        <ion-button style="width:168.7px; margin-bottom:1rem" arial-label="continue" [routerLink]="['/before-we-start']">SEGUIR DE TODOS MODOS</ion-button>
+      </div>
+      </p-card>
+    </div>
+    
+    </ng-container>
     <div>
 
       <ng-template #mobileView> 
