@@ -17,6 +17,7 @@
 
   <ion-content [fullscreen]="true">
 
+    <!-- TODO: make it a component-->
       <!-- Modal -->
       <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
         <ng-template>
@@ -66,15 +67,21 @@
                   [(ngModel)]="feedbackConfusing"
                 ></ion-textarea>
               </ion-item> -->
+              <p-messages severity="info"  >
 
-              <p-messages severity="info"   >
-                <ng-template pTemplate>
-                  <p class="privacy-note">
-                    Your feedback is private and will not be shared with anyone.
-                  </p>
-                </ng-template>
-              </p-messages>
-        
+              <ng-template pTemplate>
+                <p class="privacy-note">
+                  Your feedback is private, and will be used solely to improve the app and provide a better experience for our users.  
+                </p>
+                 
+                <ion-button size="small" fill="clear" (click)="learnMore()">
+                  Learn More
+                  <ion-icon slot="end" name="information-circle-outline"></ion-icon>
+                </ion-button>
+              </ng-template>
+              
+
+            </p-messages>
           </ion-content>
         </ng-template>
       </ion-modal>

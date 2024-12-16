@@ -35,6 +35,9 @@ export class HomePage implements  AfterViewInit, OnInit {
     this.modal.dismiss(null, 'cancel');
   }
 
+  learnMore(){
+    
+  }
   confirm() {
     this.modal.dismiss(this.feedback, 'confirm');
   }
