@@ -30,6 +30,7 @@
     "@ionic/angular": "^8.0.0",
     "@ionic/storage-angular": "^4.0.0",
     "@jsverse/transloco": "^7.4.3",
+    "angularx-qrcode": "^18.0.2",
     "ionicons": "^7.0.0",
     "primeicons": "^7.0.0",
     "primeng": "^17.18.6",

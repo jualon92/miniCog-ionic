@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "app.web.mini_cog_test.twa",
+        "sha256_cert_fingerprints": ["0B:7A:9A:83:4F:B7:49:02:30:BA:EC:58:B9:BF:CB:1A:CA:C9:05:62:5E:FA:3D:E9:A7:3D:B6:1D:84:7F:54:41"]
+      }
+    }]
