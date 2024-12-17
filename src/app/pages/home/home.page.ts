@@ -11,6 +11,8 @@ import { MessageService } from 'primeng/api';
 import { StorageService } from 'src/storage/storage.service';
 import { TIMES_DONE } from 'src/storage/storage.entities';
 import { IonModal } from '@ionic/angular';
+import { HomeService } from './home.service';
+import { catchError } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -30,31 +32,14 @@ export class HomePage implements  AfterViewInit, OnInit {
   @ViewChild(IonModal) modal!: IonModal;
 
   message = 'This modal example uses triggers to automatically open a modal when the button is clicked.';
-
-  cancel() {
-    this.modal.dismiss(null, 'cancel');
-  }
-
-  learnMore(){
-    
-  }
-  confirm() {
-    this.modal.dismiss(this.feedback, 'confirm');
-  }
-
-  onWillDismiss(event: Event) {
-    const ev = event as CustomEvent<any>;
-    if (ev.detail.role === 'confirm') {
-      this.message = `Hello, ${ev.detail.data}!`;
-    }
-  }
-
+ 
    
 
   constructor(
     private translocoService: TranslocoService,
     private storage: StorageService,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private homeService: HomeService,
   ) {}
 
   ngOnInit(): void {
@@ -67,6 +52,26 @@ export class HomePage implements  AfterViewInit, OnInit {
   }
 
  
+
+  cancel() {
+    this.modal.dismiss(null, 'cancel');
+  }
+
+  learnMore(){
+    
+  }
+  confirm() { 
+    this.homeService.saveFeedback(this.feedback)
+   this.modal.dismiss(this.feedback, 'confirm');   
+ 
+  }
+
+  onWillDismiss(event: Event) {
+    const ev = event as CustomEvent<any>;
+    if (ev.detail.role === 'confirm') {
+      this.message = `Hello, ${ev.detail.data}!`;
+    }
+  }
 
  
   ngAfterViewInit() {
