@@ -61,7 +61,7 @@ export class HomePage implements  AfterViewInit, OnInit {
     
   }
   confirm() { 
-    this.homeService.saveFeedback(this.feedback)
+    this.homeService.saveFeedback(this.feedback).subscribe();
    this.modal.dismiss(this.feedback, 'confirm');   
  
   }
