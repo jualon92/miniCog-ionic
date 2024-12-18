@@ -12,7 +12,7 @@ import { StorageService } from 'src/storage/storage.service';
 import { TIMES_DONE } from 'src/storage/storage.entities';
 import { IonModal } from '@ionic/angular';
 import { HomeService } from './home.service';
-import { catchError } from 'rxjs';
+import { catchError, Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -61,11 +61,33 @@ export class HomePage implements  AfterViewInit, OnInit {
     
   }
   confirm() { 
-    this.homeService.saveFeedback(this.feedback).subscribe();
-   this.modal.dismiss(this.feedback, 'confirm');   
+    this.homeService.saveFeedback(this.feedback).pipe(catchError( (err) => this.showSendFeedbackNotification(err) )).subscribe()
+    
  
   }
 
+
+  showSendFeedbackNotification(err: any):  Observable<any>{
+    if (err.ok){
+      this.messageService.add({
+        severity: 'success',
+        summary: 'Success',
+        detail: 'Feedback saved successfully',
+      });
+   
+    }else{
+      this.messageService.add({
+        severity: 'error',
+        summary: 'Error',
+        detail: 'Failed to save feedback',
+      });
+ 
+    }  
+    this.modal.dismiss(this.feedback, 'confirm');  
+    return of(err);
+  }
+
+ 
   onWillDismiss(event: Event) {
     const ev = event as CustomEvent<any>;
     if (ev.detail.role === 'confirm') {
