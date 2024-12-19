@@ -61,7 +61,12 @@ export class HomePage implements  AfterViewInit, OnInit {
     
   }
   confirm() { 
-    this.homeService.saveFeedback(this.feedback).pipe(catchError( (err) => this.showSendFeedbackNotification(err) )).subscribe()
+    this.homeService.saveFeedback(this.feedback).pipe(catchError( (err) => this.showSendFeedbackNotification(err) )).subscribe(response => {
+      if (response.success) {
+        this.messageService.add({ severity: 'success', summary: 'Feedback', detail: "comentario enviado" });
+      }
+      this.modal.dismiss(this.feedback, 'confirm');
+    });
     
  
   }
@@ -83,7 +88,7 @@ export class HomePage implements  AfterViewInit, OnInit {
       });
  
     }  
-    this.modal.dismiss(this.feedback, 'confirm');  
+   
     return of(err);
   }
 
