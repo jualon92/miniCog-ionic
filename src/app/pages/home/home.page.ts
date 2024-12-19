@@ -64,7 +64,7 @@ export class HomePage implements  AfterViewInit, OnInit {
     this.homeService.saveFeedback(this.feedback).pipe(catchError( (err) => this.showSendFeedbackNotification(err) )).subscribe(response => {
       
       this.messageService.add({ severity: 'success', summary: 'Feedback', detail: "comentario enviado" });
-     
+      this.feedback = "";
       this.modal.dismiss(this.feedback, 'confirm');
     });
     
