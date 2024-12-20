@@ -65,6 +65,8 @@ export class HomePage implements  AfterViewInit, OnInit {
       
       this.messageService.add({ severity: 'success', summary: 'Feedback', detail: "comentario enviado" });
       this.feedback = "";
+
+      
       this.modal.dismiss(this.feedback, 'confirm');
     });
     
@@ -72,25 +74,19 @@ export class HomePage implements  AfterViewInit, OnInit {
   }
 
 
-  showSendFeedbackNotification(err: any):  Observable<any>{
-    if (err.ok){
-      this.messageService.add({
-        severity: 'success',
-        summary: 'Success',
-        detail: 'Feedback saved successfully',
-      });
-   
-    }else{
-      this.messageService.add({
+  showSendFeedbackNotification(err: any): Observable<any> {
+    const errorMessage = err.status === 503 
+        ? 'Has excedido el límite de intentos. Por favor, intenta mas tarde.' 
+        : 'Error al guardar el comentario';
+
+    this.messageService.add({
         severity: 'error',
         summary: 'Error',
-        detail: 'Failed to save feedback',
-      });
- 
-    }  
-   
+        detail: errorMessage
+    });
+
     return of(err);
-  }
+}
 
  
   onWillDismiss(event: Event) {
