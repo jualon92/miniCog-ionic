@@ -99,5 +99,13 @@
     "CLEAN_DATA": "Limpiar datos",
     "GO_BACK": "Volver",
     "NO_DATA": "No se han cargados datos aun. Termina un test para verlo aqui"
+  },
+  "COMMENT":{
+    "CANCEL": "Cancelar",
+    "CONFIRM": "Confirmar",
+    "TITLE": "Dejanos un comentario",
+    "PLACEHOLDER": " ¿Qué te pareció la aplicación? ¿Cómo podemos mejorarla?",
+    "READ_MORE": "Leer más",
+    "INFO": " Your feedback is private, and will be used solely to improve the app and provide a better experience for our users.  "
   }
 }
