@@ -11,6 +11,7 @@ import { TranslocoRootModule } from 'src/app/transloco-root.module';
 import { SafeHtmlPipe } from 'src/app/safe-html.pipe';
 import { ReadMoreComponent } from '../shared/buttons/read-more/read-more.component';
 import { ShowHistoryComponent } from "../shared/buttons/show-history/show-history.component";
+import { TotalColorPipe } from './total-color.pipe';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { ShowHistoryComponent } from "../shared/buttons/show-history/show-histor
     ResultsPageRoutingModule,
     ShowHistoryComponent,
     ShowHistoryComponent,
+    TotalColorPipe,
 ],
   declarations: [ResultsPage,SafeHtmlPipe,  ]
 })

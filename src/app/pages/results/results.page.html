@@ -20,15 +20,22 @@
   -->
     
     <h2>{{t('RESULTS.SCORE')}}</h2>
-    <div style="display:flex; justify-content: center;"> 
-    <div>{{t('RESULTS.WORD_RECALL')}}: {{threeWordRecallPoints}}</div>
-    <div>{{t('RESULTS.CLOCK_DRAWING')}}: {{clockDrawingPoints}}</div>
-    <div>{{t('RESULTS.TOTAL_SCORE')}} : <b> {{threeWordRecallPoints + clockDrawingPoints}}</b>
+    <div style="display:flex; justify-content: center; padding-left:0;padding-right:0;"> 
+    <div style="    padding-left: 0em;
+    padding-right: 0em;">{{t('RESULTS.WORD_RECALL')}} <span style="margin-left:0.2em;margin-right: 0.3em;">+</span>  <div >{{threeWordRecallPoints}}</div></div>
+   
+   <div style="    padding-left: 0em;
+    padding-right: 0em;">{{t('RESULTS.CLOCK_DRAWING')}}<span style="margin-left:0.3em;margin-right: 0.4em;">=</span><div >{{clockDrawingPoints}}</div>  </div>
+    
+   <div class="p-highlight"  style="
+    padding-right: 0em; padding-left:0em"> <b>{{t('RESULTS.TOTAL_SCORE')}}</b> <div ><b>
+         <ion-badge [color]=" threeWordRecallPoints + clockDrawingPoints | totalColor" style="font-size:20px;">   {{threeWordRecallPoints + clockDrawingPoints}}</ion-badge>
+     </b> </div> 
     </div> </div>
     
 
     <ion-item-divider></ion-item-divider>
-   <h2>{{t('RESULTS.INTERPRETATION_LABEL')}}</h2>
+   <h2>{{t('RESULTS.INTERPRETATION_LABEL')}}:  {{threeWordRecallPoints + clockDrawingPoints}} </h2>
     <ul aria-label="cut-point">
         <li [innerHTML]="t('RESULTS.CUT_POINT') | safeHTML">  </li>
        
@@ -36,15 +43,21 @@
     </ul>
   </div>
 
-  <div class="ion-text-center">
-    <ion-button style="width:168.7px; margin-bottom:1rem; margin-top:1rem" aria-label="redo the test"  [routerLink]="['']">{{t("RESULTS.CONTINUE")}}</ion-button> 
-  </div>
-
-  <!-- TODO: go back should be on top-->
-   <app-show-history/>
-
-   
-    <app-read-more/>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-button aria-label="redo the test" [routerLink]="['']">{{t("RESULTS.CONTINUE")}}</ion-button>
+      </ion-col>
+      <ion-col class="ion-text-center">
+        <app-show-history></app-show-history>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-text-center"  >
+        <app-read-more></app-read-more>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 
 </ion-content>
