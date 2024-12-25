@@ -65,7 +65,6 @@ export class LeaveACommentComponent  {
         ? 'Has excedido el límite de intentos. Por favor, intenta mas tarde.'
         : 'Error al guardar el comentario';
     this.isError = true;
-    debugger;
     this.cdr.markForCheck();
 
     return of(err);
