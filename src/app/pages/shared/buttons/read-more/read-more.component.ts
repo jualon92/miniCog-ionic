@@ -9,10 +9,10 @@ import { TranslocoRootModule } from 'src/app/transloco-root.module';
   standalone: true,
   imports: [IonicModule, TranslocoRootModule]
 })
-export class ReadMoreComponent  implements OnInit {
+export class ReadMoreComponent {
 
   constructor() { }
 
-  ngOnInit() {}
+
 
 }
