@@ -26,6 +26,7 @@ import { FloatLabelModule } from 'primeng/floatlabel';
 
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { MessagesModule } from 'primeng/messages';
+import { LeaveACommentComponent } from '../shared/leave-a-comment/leave-a-comment.component';
 @NgModule({
   imports: [
     DropdownModule,
@@ -45,6 +46,7 @@ import { MessagesModule } from 'primeng/messages';
     RippleModule,
     HomePageRoutingModule,
     ShowHistoryComponent,
+    LeaveACommentComponent,
   ],
   declarations: [HomePage]
 })
