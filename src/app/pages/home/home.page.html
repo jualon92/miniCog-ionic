@@ -19,73 +19,7 @@
 
     <!-- TODO: make it a component-->
       <!-- Modal -->
-      <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
-        <ng-template>
-          <ion-header>
-            <ion-toolbar>
-              <ion-buttons slot="start">
-                <ion-button (click)="cancel()">Cancel</ion-button>
-              </ion-buttons>
-              <ion-title>Leave us a comment</ion-title>
-              <ion-buttons slot="end">
-                <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
-              </ion-buttons>
-            </ion-toolbar>
-          </ion-header>
-          <ion-content class="ion-padding">
-           
-            
-     <!--            <ion-textarea
-                  label="What would make this app better for you?"
-                  labelPlacement="stacked"
-                  type="text"
-                  fill="solid"
-                  placeholder="Share your thoughts..."
-                  [(ngModel)]="feedback"
-                ></ion-textarea>
-            -->
-
-            <h1>Leave us a comment.</h1>
-        
-              <textarea 
-                style="width: 100%;"
-                  rows="10"  
-                  [(ngModel)]="feedback"
-                  placeholder="Share your thoughts... ie: Whats wrong, what is confusing, what you like"	
-                  pInputTextarea>
-               
-              </textarea>
-           
-
-              
-            <!--    <ion-item>
-                <ion-textarea
-                  label="What’s one thing you found confusing or frustrating?"
-                  labelPlacement="stacked"
-                  type="text"
-                  autoGrow="true"
-                  placeholder="Share your thoughts..."
-                  [(ngModel)]="feedbackConfusing"
-                ></ion-textarea>
-              </ion-item> -->
-              <p-messages severity="info"  >
-
-              <ng-template pTemplate>
-                <p class="privacy-note">
-                  Your feedback is private, and will be used solely to improve the app and provide a better experience for our users.  
-                </p>
-                 
-                <ion-button size="small" fill="clear" (click)="learnMore()">
-                  Learn More
-                  <ion-icon slot="end" name="information-circle-outline"></ion-icon>
-                </ion-button>
-              </ng-template>
-              
-
-            </p-messages>
-          </ion-content>
-        </ng-template>
-      </ion-modal>
+     <app-leave-a-comment/>
       
 
 
@@ -142,6 +76,8 @@
   </ion-content>
 </ng-container>
  
+ 
+
 
 <p-toast appendTo="body"  [life]="20000" />
 
