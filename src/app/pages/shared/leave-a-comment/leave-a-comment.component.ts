@@ -44,7 +44,7 @@ export class LeaveACommentComponent  {
       .pipe(catchError((err) => this.showSendFeedbackNotification(err)))
       .subscribe((response) => {
         
-        if (!response?.error){
+        if (response?.status === 200){
           this.isSuccess = true;
           this.cdr.markForCheck();
           this.feedback = '';
