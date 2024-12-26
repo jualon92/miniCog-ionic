@@ -1,7 +1,7 @@
 {
   "GUESS": "Correctas",
   "POINTS": "Puntos",
-  "SEE_HISTORY": "Ver historial",
+  "SEE_HISTORY": "historial",
   "READ_MORE_BUTTON": "Leer más acerca del Test",
   "HOME": {
     "FAQ": "FAQ - Mini Cog",
@@ -86,14 +86,14 @@
   "RESULTS": {
     "TITLE": "Resultados",
     "BRIEF_DESCRIPTION": "Puntuación total = Puntuación de Recuerdo de Palabras + Puntuación de Dibujo del Reloj.",
-    "CUT_POINT": "Un punto de corte de <b>menos de 3</b> en el Mini-Cog™ ha sido validado para la detección de demencia, pero muchas personas con deterioro cognitivo clínicamente significativo obtendrán una puntuación más alta.",
-    "INTERPRETATION": "Cuando se desea una mayor sensibilidad, se recomienda un punto de corte de <b>menos de 4</b>, ya que puede indicar la necesidad de una evaluación adicional del estado cognitivo.",
-    "CONTINUE": "REHACER prueba.",
-    "WORD_RECALL": "Palabras recordadas",
-    "CLOCK_DRAWING": "Dibujo del reloj",
-    "TOTAL_SCORE": "Puntuación total",
+    "CUT_POINT": "Un punto de corte <b> MENOR de 3 puntos</b> en el Mini-Cog™ ha sido validado para la detección de demencia, pero muchas personas con deterioro cognitivo clínicamente significativo obtendrán una puntuación más alta.",
+    "INTERPRETATION": "Cuando se desea una mayor sensibilidad, se recomienda un punto de corte  <b>MENOR de 4</b>, ya que puede indicar la necesidad de una evaluación adicional del estado cognitivo.",
+    "CONTINUE": "Repetir ⭯",
+    "WORD_RECALL": "Palabras 📚",
+    "CLOCK_DRAWING": "Reloj 🕒",
+    "TOTAL_SCORE": "Total 📈 ",
     "SCORE": "Puntuación",
-    "INTERPRETATION_LABEL": "Interpretación"
+    "INTERPRETATION_LABEL": "Interpretación Puntaje total"
   },
   "HISTORY":{
     "CLEAN_DATA": "Limpiar datos",
