@@ -92,6 +92,17 @@
     "SCORE": "Score",
     "INTERPRETATION_LABEL": "Interpretation"
   },
+  "HISTORY":{
+    "TITLE": "History",
+    "WORD_RECALL":"Word Recall",
+    "CLOCK_DRAWING":"Clock Drawing",
+    "TOTAL_SCORE":"Total",
+    "DATE":"Date",
+    "DELETE":"Delete",
+    "CLEAN_DATA": "Limpiar datos",
+    "GO_BACK": "Volver",
+    "NO_DATA": "No se han cargados datos aun. Termina un test para verlo aqui"
+  },
   "COMMENT":{
     "CANCEL": "Cancel",
     "CONFIRM": "Confirm",

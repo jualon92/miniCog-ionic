@@ -96,6 +96,12 @@
     "INTERPRETATION_LABEL": "Interpretación Puntaje total"
   },
   "HISTORY":{
+    "TITLE": "Historial",
+    "WORD_RECALL":"Palabras",
+    "CLOCK_DRAWING":"Reloj",
+    "TOTAL_SCORE":"Total",
+    "DATE":"Fecha",
+    "DELETE":"Eliminar",
     "CLEAN_DATA": "Limpiar datos",
     "GO_BACK": "Volver",
     "NO_DATA": "No se han cargados datos aun. Termina un test para verlo aqui"
