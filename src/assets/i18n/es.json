@@ -88,7 +88,7 @@
     "BRIEF_DESCRIPTION": "Puntuación total = Puntuación de Recuerdo de Palabras + Puntuación de Dibujo del Reloj.",
     "CUT_POINT": "Un punto de corte <b> MENOR de 3 puntos</b> en el Mini-Cog™ ha sido validado para la detección de demencia, pero muchas personas con deterioro cognitivo clínicamente significativo obtendrán una puntuación más alta.",
     "INTERPRETATION": "Cuando se desea una mayor sensibilidad, se recomienda un punto de corte  <b>MENOR de 4</b>, ya que puede indicar la necesidad de una evaluación adicional del estado cognitivo.",
-    "CONTINUE": "Repetir ⭯",
+    "CONTINUE": "Repetir",
     "WORD_RECALL": "Palabras 📚",
     "CLOCK_DRAWING": "Reloj 🕒",
     "TOTAL_SCORE": "Total 📈 ",
