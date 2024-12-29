@@ -43,13 +43,15 @@ export class LeaveACommentComponent  {
       .saveFeedback(this.feedback)
       .pipe(catchError((err) => this.showSendFeedbackNotification(err)))
       .subscribe((response) => {
+        console.log(response);
+        // if response has error shape, exit
+        if (response?.status) return; 
+      
+        this.isSuccess = true;
+        this.cdr.markForCheck();
+        this.feedback = '';
+        this.modal.dismiss(this.feedback, 'confirm');
         
-        if (response?.status === 200){
-          this.isSuccess = true;
-          this.cdr.markForCheck();
-          this.feedback = '';
-          this.modal.dismiss(this.feedback, 'confirm');
-        } 
       
       });
   }
