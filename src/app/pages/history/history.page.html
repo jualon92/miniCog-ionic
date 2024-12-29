@@ -4,14 +4,14 @@
 
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>historial</ion-title>
+    <ion-title>{{t("HISTORY.TITLE")}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">history</ion-title>
+      <ion-title size="large">{{t("HISTORY.TITLE")}}</ion-title>
     </ion-toolbar>
   </ion-header>
  
@@ -39,11 +39,11 @@
   <ng-template pTemplate="header">
       <tr>
 <!--   <th>id</th>   -->
-          <th>Word recall</th>
-          <th>Clock drawing</th>
-          <th>Score</th>
-          <th>Date</th>
-          <th>remove</th>
+          <th>{{t("HISTORY.WORD_RECALL")}}</th>
+          <th>{{t("HISTORY.CLOCK_DRAWING")}}</th>
+          <th>{{t("HISTORY.TOTAL_SCORE")}}</th>
+          <th>{{t("HISTORY.DATE")}}</th>
+          <th>{{t("HISTORY.DELETE")}}</th>
       </tr>
   </ng-template>
   <ng-template pTemplate="body" let-item let-rowIndex="rowIndex">
@@ -53,7 +53,9 @@
           <td>   {{ item.clockPoints }}  </td>
           <td> <b>  {{item.wordPoints + item.clockPoints}} </b></td>
           <td>{{item.date | date: "dd/MM/yy HH:mm "}}</td> 
-          <td> <p-button (onClick)="removeItem(rowIndex)" icon="pi pi-trash" [rounded]="true" [text]="true" severity="warning" /> </td>
+          <td> <p-button (onClick)="removeItem(rowIndex)" [rounded]="true" [text]="true" severity="warning" >
+            <ion-icon name="trash-outline"></ion-icon>  
+          </p-button> </td>
         </tr>
   </ng-template>
 </p-table>
