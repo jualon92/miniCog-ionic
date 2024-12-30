@@ -50,7 +50,10 @@ export class LeaveACommentComponent  {
         this.isSuccess = true;
         this.cdr.markForCheck();
         this.feedback = '';
-        this.modal.dismiss(this.feedback, 'confirm');
+        setTimeout(() => {
+          this.modal.dismiss(this.feedback, 'confirm');
+        }, 1000);
+        
         
       
       });
