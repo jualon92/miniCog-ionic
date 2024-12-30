@@ -53,8 +53,8 @@
           <td>   {{ item.clockPoints }}  </td>
           <td> <b>  {{item.wordPoints + item.clockPoints}} </b></td>
           <td>{{item.date | date: "dd/MM/yy HH:mm "}}</td> 
-          <td> <p-button icon="fa fa-trash" (onClick)="removeItem(rowIndex)" [rounded]="true" [text]="true" severity="warning" >
-       <!--      <ion-icon name="trash-outline"></ion-icon>   -->
+          <td> <p-button  (onClick)="removeItem(rowIndex)" [rounded]="true" [text]="true" severity="warning" >
+        <ion-icon name="trash-outline"></ion-icon>  
           </p-button> </td>
         </tr>
   </ng-template>
