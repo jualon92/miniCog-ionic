@@ -57,18 +57,23 @@
             {{t("COMMENT.INFO")}}
           </p>
            
-          <ion-button size="small" fill="clear" (click)="learnMore()">
+         <!--  <ion-button size="small" fill="clear" (click)="learnMore()">
             {{t("COMMENT.READ_MORE")}}
             <ion-icon slot="end" name="information-circle-outline"></ion-icon>
-          </ion-button>
+          </ion-button> -->
         </ng-template>
        
       </p-messages>
       <ion-toast (didDismiss)="isSuccess = false " [isOpen]="isSuccess" color="success" [message]="successMessage" [duration]="2000"></ion-toast>
       <ion-toast  (didDismiss)="isError = false "  [isOpen]="isError" color="danger" [message]="errorMessage" [duration]="10000"></ion-toast>
-      @if (isLoading) {
-        <ion-spinner   color="primary"></ion-spinner>
+      @if (isLoading){
+        <div style="display:flex; justify-content: center; margin-top:4rem">
+          <ion-spinner style="text-align:center" color="primary"></ion-spinner>
+      
+        </div>
       }
+       
+      
      
     </ion-content>
   </ng-template>
