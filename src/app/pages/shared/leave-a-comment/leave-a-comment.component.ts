@@ -48,11 +48,13 @@ export class LeaveACommentComponent  {
         if (response?.status) return; 
       
         this.isSuccess = true;
+        this.successMessage = 'Comentario guardado';
         this.cdr.markForCheck();
         this.feedback = '';
+        
         setTimeout(() => {
           this.modal.dismiss(this.feedback, 'confirm');
-        }, 1000);
+        }, 3000);
         
         
       
