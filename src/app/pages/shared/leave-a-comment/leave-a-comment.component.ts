@@ -51,9 +51,11 @@ export class LeaveACommentComponent  {
         this.cdr.markForCheck();
      
         
+        setTimeout(() => {
+          this.feedback = '';
+          this.modal.dismiss(this.feedback, 'confirm');
+        }, 2500);
         
-        this.feedback = '';
-        this.modal.dismiss(this.feedback, 'confirm');
        
         
         
