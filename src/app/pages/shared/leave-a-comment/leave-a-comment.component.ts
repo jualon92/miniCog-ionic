@@ -24,8 +24,7 @@ export class LeaveACommentComponent  {
   isError = false;
   isSuccess = false;
   errorMessage = '';
-  successMessage = '';
-  loading = false;
+  successMessage = ''; 
   constructor(
     private homeService: HomeService,
     private cdr: ChangeDetectorRef,
@@ -38,7 +37,7 @@ export class LeaveACommentComponent  {
 
   confirm() {
  
-    this.loading = true;
+ 
     this.homeService
       .saveFeedback(this.feedback)
       .pipe(catchError((err) => this.showSendFeedbackNotification(err)))
@@ -50,11 +49,11 @@ export class LeaveACommentComponent  {
         this.isSuccess = true;
         this.successMessage = 'Comentario guardado';
         this.cdr.markForCheck();
-        this.loading = false
-        
      
-         this.feedback = '';
-         this.modal.dismiss(this.feedback, 'confirm');
+        
+        
+        this.feedback = '';
+        this.modal.dismiss(this.feedback, 'confirm');
        
         
         
@@ -74,7 +73,7 @@ export class LeaveACommentComponent  {
         : 'Error al guardar el comentario';
     this.isError = true;
     this.cdr.markForCheck();
-    this.loading = false
+ 
     return of(err);
   }
 

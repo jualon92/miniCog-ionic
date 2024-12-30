@@ -66,7 +66,7 @@
       </p-messages>
       <ion-toast (didDismiss)="isSuccess = false " [isOpen]="isSuccess" color="success" [message]="successMessage" [duration]="10000"></ion-toast>
       <ion-toast  (didDismiss)="isError = false "  [isOpen]="isError" color="danger" [message]="errorMessage" [duration]="10000"></ion-toast>
-      <ion-loading *ngIf="loading" message="Dismissing after 3 seconds..." duration="1000"></ion-loading>
+     
     </ion-content>
   </ng-template>
  
