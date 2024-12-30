@@ -25,6 +25,7 @@ export class LeaveACommentComponent  {
   isSuccess = false;
   errorMessage = '';
   successMessage = ''; 
+  isLoading = false;
   constructor(
     private homeService: HomeService,
     private cdr: ChangeDetectorRef,
@@ -37,7 +38,7 @@ export class LeaveACommentComponent  {
 
   confirm() {
  
- 
+    this.isLoading = true;
     this.homeService
       .saveFeedback(this.feedback)
       .pipe(catchError((err) => this.showSendFeedbackNotification(err)))
@@ -48,8 +49,9 @@ export class LeaveACommentComponent  {
       
         this.isSuccess = true;
         this.successMessage = 'Comentario guardado';
+        this.isLoading = false;
         this.cdr.markForCheck();
-     
+      
         
         setTimeout(() => {
           this.feedback = '';
@@ -74,8 +76,9 @@ export class LeaveACommentComponent  {
         ? 'Has excedido el límite de intentos. Por favor, intenta mas tarde.'
         : 'Error al guardar el comentario';
     this.isError = true;
+    this.isLoading = false;
     this.cdr.markForCheck();
- 
+    
     return of(err);
   }
 
