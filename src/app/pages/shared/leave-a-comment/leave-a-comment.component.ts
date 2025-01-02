@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { IonModal } from '@ionic/angular/standalone';
@@ -18,8 +18,9 @@ import { ToastModule } from 'primeng/toast';
   standalone: true,
   imports: [IonicModule, FormsModule, ToastModule, MessagesModule, TranslocoRootModule]
 })
-export class LeaveACommentComponent  {
-  @ViewChild("modal") modal!: IonModal;
+export class LeaveACommentComponent implements OnDestroy  {
+  @ViewChild("modal") modal!: IonModal | any;
+  @Input() name = '';
   feedback = '';
   isError = false;
   isSuccess = false;
@@ -83,4 +84,9 @@ export class LeaveACommentComponent  {
   }
 
   learnMore() {}
+
+  ngOnDestroy(){
+    this.modal.dismiss(null, 'cancel');
+     
+  }
 }
