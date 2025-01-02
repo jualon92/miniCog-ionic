@@ -2,7 +2,14 @@
   <ion-header [translucent]="true">
     <ion-toolbar>
       <ion-title>{{t("SCORE_WORDS.TITLE")}}</ion-title>
+      <ion-buttons slot="end">
+        <ion-button id="open-modal-scoring" expand="block" >
+          <ion-icon slot="icon-only" name="chatbubble-ellipses-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <app-leave-a-comment name="open-modal-scoring"/>
     </ion-toolbar>
+ 
   </ion-header>
 
   <ion-content [fullscreen]="true">

@@ -8,6 +8,7 @@ import { BeforeWeStartPageRoutingModule } from './before-we-start-routing.module
 
 import { BeforeWeStartPage } from './before-we-start.page';
 import { TranslocoRootModule } from 'src/app/transloco-root.module';
+import { LeaveACommentComponent } from '../shared/leave-a-comment/leave-a-comment.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,9 @@ import { TranslocoRootModule } from 'src/app/transloco-root.module';
     FormsModule,
     TranslocoRootModule,
     IonicModule,
-    BeforeWeStartPageRoutingModule
+    BeforeWeStartPageRoutingModule,
+    LeaveACommentComponent,
+    
   ],
   declarations: [BeforeWeStartPage]
 })

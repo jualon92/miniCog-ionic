@@ -1,5 +1,5 @@
 <ng-container *transloco="let t"> 
-<ion-modal #modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+<ion-modal #modal [trigger]="name" (willDismiss)="onWillDismiss($event)">
   <ng-template>
     <ion-header>
       <ion-toolbar>

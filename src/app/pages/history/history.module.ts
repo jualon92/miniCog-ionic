@@ -8,6 +8,7 @@ import { HistoryPageRoutingModule } from './history-routing.module';
 
 import { HistoryPage } from './history.page';
 import { TranslocoModule } from '@jsverse/transloco';
+import { LeaveACommentComponent } from '../shared/leave-a-comment/leave-a-comment.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { TranslocoModule } from '@jsverse/transloco';
     IonicModule,
     HistoryPageRoutingModule,
     TranslocoModule,
+    LeaveACommentComponent,
   ],
   declarations: [HistoryPage]
 })

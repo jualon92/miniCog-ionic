@@ -10,6 +10,7 @@ import { ThreeWordRegistrationPage } from './three-word-registration.page';
 import { MessagesModule } from 'primeng/messages';
 import { ButtonModule } from 'primeng/button';
 import { TranslocoRootModule } from 'src/app/transloco-root.module';
+import { LeaveACommentComponent } from '../shared/leave-a-comment/leave-a-comment.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { TranslocoRootModule } from 'src/app/transloco-root.module';
     TranslocoRootModule,
     MessagesModule,
     ButtonModule,
-    ThreeWordRegistrationPageRoutingModule
+    ThreeWordRegistrationPageRoutingModule,
+    LeaveACommentComponent
   ],
   declarations: [ThreeWordRegistrationPage]
 })

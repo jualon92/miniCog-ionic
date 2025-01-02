@@ -12,6 +12,7 @@ import { ButtonModule } from 'primeng/button';
 import { TranslocoModule } from '@jsverse/transloco';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { LeaveACommentComponent } from '../shared/leave-a-comment/leave-a-comment.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -21,7 +22,8 @@ import { RadioButtonModule } from 'primeng/radiobutton';
     MessagesModule,
     ButtonModule,
     ScoreClockPageRoutingModule,
-    RadioButtonModule
+    RadioButtonModule,
+    LeaveACommentComponent,
   ],
   declarations: [ScoreClockPage]
 })

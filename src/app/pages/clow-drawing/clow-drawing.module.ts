@@ -11,6 +11,7 @@ import { MessagesModule } from 'primeng/messages';
 import { ButtonModule } from 'primeng/button';
 import { TranslocoRootModule } from 'src/app/transloco-root.module';
 import { InputNumberModule } from 'primeng/inputnumber';
+import { LeaveACommentComponent } from '../shared/leave-a-comment/leave-a-comment.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { InputNumberModule } from 'primeng/inputnumber';
     TranslocoRootModule,
     ClowDrawingPageRoutingModule,
     MessagesModule,
-    ButtonModule 
+    ButtonModule,
+    LeaveACommentComponent,
   ],
   declarations: [ClowDrawingPage]
 })

@@ -5,7 +5,14 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>{{t("HISTORY.TITLE")}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button id="open-modal-history" expand="block" >
+        <ion-icon slot="icon-only" name="chatbubble-ellipses-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <app-leave-a-comment name="open-modal-history"/>
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content [fullscreen]="true">
