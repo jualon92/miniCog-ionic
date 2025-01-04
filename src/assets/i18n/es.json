@@ -81,7 +81,7 @@
     "CORRECT_CLOCK": "Un reloj normal debe incluir todos los números (1-12), cada uno solo una vez, en el orden y dirección correctos (en el sentido de las agujas del reloj).",
     "CORRECT_HANDS": "También deben estar presentes dos manecillas, una apuntando a las 11 y otra a las 2.",
     "HAND_INFO": "La longitud de la mano no se califica.",
-    "CONTINUE": "Ver resultados."
+    "CONTINUE": "Ver resultados"
   },
   "RESULTS": {
     "TITLE": "Resultados",
