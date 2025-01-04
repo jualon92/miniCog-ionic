@@ -5,6 +5,7 @@ import { TranslocoModule } from '@jsverse/transloco';
 import { TranslocoRootModule } from 'src/app/transloco-root.module';
 import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
+import { StorageService } from 'src/storage/storage.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -16,14 +17,20 @@ import { NavController } from '@ionic/angular';
 })
 export class ToolbarComponent  implements OnInit {
   @Input() title: string = "";
+  timesVisited: any = 0; 
+  constructor(public storage: StorageService, public router : Router, public navController: NavController) {
 
-  constructor(public router : Router, public navController: NavController) {
-   
    }
 
-  ngOnInit() {
+  async ngOnInit() {
+    setTimeout(async () => {
+       const data =  await this.storage.getHistory();
+       this.timesVisited =  data?.length;
+       
+    }, 100);
+      
    
-  }
+  } 
 
   goToHistory(){
     this.navController.navigateForward('history');

@@ -54,7 +54,8 @@ export class StorageService {
   clear(){
     this._storage?.clear();
   }
-  getTimesDone(){
+  async getTimesDone(){
+    await this.storageReady;
     return this._storage?.get(TIMES_DONE);
   }
 
@@ -106,7 +107,7 @@ export class StorageService {
     //wait for storage to be ready
     await this.storageReady;
     return this._storage?.get(HISTORY).then((history : HistorySnapshot[]) => {
-       return history.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+       return history?.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()) ?? [];
     });
   }
  

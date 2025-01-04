@@ -3,7 +3,7 @@
     <ion-title>{{title}}</ion-title>
     <ion-buttons slot="end">
       <ion-button   (click)="goToHistory()" expand="block">
-        <ion-icon slot="icon-only" name="clipboard-outline"></ion-icon>
+        <ion-icon slot="icon-only" name="clipboard-outline" [color]="timesVisited > 0 ? 'primary' : 'unset'"></ion-icon>
       </ion-button>
       <ion-button [id]="title" expand="block">
         <ion-icon slot="icon-only" name="chatbubble-ellipses-outline"></ion-icon>
