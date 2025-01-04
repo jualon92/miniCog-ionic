@@ -47,9 +47,9 @@
       <ion-col class="ion-text-center">
         <ion-button style="width:133px" aria-label="redo the test" [routerLink]="['']">{{t("RESULTS.CONTINUE")}} <ion-icon name="refresh-outline" style="margin-left:6px; margin-bottom:2px"></ion-icon></ion-button>
       </ion-col>
-      <ion-col class="ion-text-center">
+  <!--     <ion-col class="ion-text-center">
         <app-show-history [width]="133"></app-show-history>
-      </ion-col>
+      </ion-col> -->
     </ion-row>
     <ion-row>
       <ion-col class="ion-text-center"  >
@@ -59,6 +59,7 @@
   </ion-grid>
 
 
+  <ion-toast (didDismiss)="isSuccess = false " [isOpen]="isSuccess" color="success" [message]="successMessage" [duration]="2000"></ion-toast>
 </ion-content>
 
 </ng-container>
