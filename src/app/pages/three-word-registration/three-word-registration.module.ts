@@ -11,6 +11,7 @@ import { MessagesModule } from 'primeng/messages';
 import { ButtonModule } from 'primeng/button';
 import { TranslocoRootModule } from 'src/app/transloco-root.module';
 import { LeaveACommentComponent } from '../shared/leave-a-comment/leave-a-comment.component';
+import { ToolbarComponent } from '../toolbar/toolbar.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { LeaveACommentComponent } from '../shared/leave-a-comment/leave-a-commen
     MessagesModule,
     ButtonModule,
     ThreeWordRegistrationPageRoutingModule,
-    LeaveACommentComponent
+    LeaveACommentComponent,
+    ToolbarComponent
   ],
   declarations: [ThreeWordRegistrationPage]
 })

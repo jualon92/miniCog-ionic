@@ -13,6 +13,7 @@ import { ReadMoreComponent } from '../shared/buttons/read-more/read-more.compone
 import { ShowHistoryComponent } from "../shared/buttons/show-history/show-history.component";
 import { TotalColorPipe } from './total-color.pipe';
 import { LeaveACommentComponent } from '../shared/leave-a-comment/leave-a-comment.component';
+import { ToolbarComponent } from '../toolbar/toolbar.component';
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import { LeaveACommentComponent } from '../shared/leave-a-comment/leave-a-commen
     ShowHistoryComponent,
     TotalColorPipe,
     LeaveACommentComponent,
+    ToolbarComponent
 ],
   declarations: [ResultsPage,SafeHtmlPipe,  ]
 })

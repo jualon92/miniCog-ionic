@@ -1,15 +1,8 @@
 <ng-container *transloco="let t">
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>{{t("RESULTS.TITLE")}}</ion-title>
-    <ion-buttons slot="end">
-      <ion-button id="open-modal-results" expand="block" >
-        <ion-icon slot="icon-only" name="chatbubble-ellipses-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-  <app-leave-a-comment name="open-modal-results"/>
-</ion-header>
+
+<app-toolbar
+   [title]="t('RESULTS.TITLE')">
+  </app-toolbar>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">

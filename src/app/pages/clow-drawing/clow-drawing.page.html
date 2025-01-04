@@ -1,26 +1,15 @@
 <ng-container *transloco="let t">
 
 
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>{{t("CLOCK_DRAWING.TITLE")}}</ion-title>
-    <ion-buttons slot="end">
-      <ion-button id="open-modal-draw" expand="block" >
-        <ion-icon slot="icon-only" name="chatbubble-ellipses-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+  <app-toolbar
+  [title]="t('CLOCK_DRAWING.TITLE')">
+  </app-toolbar>
 
  <ion-content>
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{t("CLOCK_DRAWING.TITLE")}}</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
 
 
-
+ 
 
 
     <div class="">

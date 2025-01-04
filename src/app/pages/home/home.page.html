@@ -1,17 +1,8 @@
 <ng-container *transloco="let t">
-  <ion-header [translucent]="true">
-    <ion-toolbar>
-      <!--TODO: componetizar-->
-      <ion-title size="large">{{t("HOME.FAQ")}}</ion-title>
-      <ion-buttons slot="end">
-        <ion-button id="open-modal-home" expand="block" >
-          <ion-icon slot="icon-only" name="chatbubble-ellipses-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </ion-toolbar>
-    <app-leave-a-comment name="open-modal-home" />
-  </ion-header>
 
+  <app-toolbar
+  [title]="t('HOME.FAQ')">
+ </app-toolbar>
 
 
  

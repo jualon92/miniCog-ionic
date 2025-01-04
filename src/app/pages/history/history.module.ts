@@ -9,6 +9,7 @@ import { HistoryPageRoutingModule } from './history-routing.module';
 import { HistoryPage } from './history.page';
 import { TranslocoModule } from '@jsverse/transloco';
 import { LeaveACommentComponent } from '../shared/leave-a-comment/leave-a-comment.component';
+import { ToolbarComponent } from '../toolbar/toolbar.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { LeaveACommentComponent } from '../shared/leave-a-comment/leave-a-commen
     HistoryPageRoutingModule,
     TranslocoModule,
     LeaveACommentComponent,
+    ToolbarComponent
   ],
   declarations: [HistoryPage]
 })

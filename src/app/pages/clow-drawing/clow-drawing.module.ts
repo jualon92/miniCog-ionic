@@ -12,6 +12,7 @@ import { ButtonModule } from 'primeng/button';
 import { TranslocoRootModule } from 'src/app/transloco-root.module';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { LeaveACommentComponent } from '../shared/leave-a-comment/leave-a-comment.component';
+import { ToolbarComponent } from '../toolbar/toolbar.component';
 
 @NgModule({
   imports: [
@@ -23,6 +24,7 @@ import { LeaveACommentComponent } from '../shared/leave-a-comment/leave-a-commen
     MessagesModule,
     ButtonModule,
     LeaveACommentComponent,
+    ToolbarComponent
   ],
   declarations: [ClowDrawingPage]
 })

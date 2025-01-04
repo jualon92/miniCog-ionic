@@ -13,6 +13,7 @@ import { TranslocoModule } from '@jsverse/transloco';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { LeaveACommentComponent } from '../shared/leave-a-comment/leave-a-comment.component';
+import { ToolbarComponent } from '../toolbar/toolbar.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -24,6 +25,7 @@ import { LeaveACommentComponent } from '../shared/leave-a-comment/leave-a-commen
     ScoreClockPageRoutingModule,
     RadioButtonModule,
     LeaveACommentComponent,
+    ToolbarComponent
   ],
   declarations: [ScoreClockPage]
 })
