@@ -14,9 +14,9 @@ import { TranslocoRootModule } from 'src/app/transloco-root.module';
 })
 export class ToolbarComponent  implements OnInit {
   @Input() title: string = "";
-  modalId = "";
+
   constructor() {
-    this.modalId = 'modal-' + Math.random().toString(36).substring
+   
    }
 
   ngOnInit() {
