@@ -2,12 +2,18 @@
   <ion-toolbar>
     <ion-title>{{title}}</ion-title>
     <ion-buttons slot="end">
-      <ion-button [id]="title" expand="block" >
-        <ion-icon slot="icon-only" name="chatbubble-ellipses-outline"></ion-icon>
+      <ion-button   (click)="goToHistory()" expand="block">
+        <ion-icon slot="icon-only" name="clipboard-outline"></ion-icon>
       </ion-button>
+      <ion-button [id]="title" expand="block">
+        <ion-icon slot="icon-only" name="chatbubble-ellipses-outline"></ion-icon>
+       
+      </ion-button>
+
     </ion-buttons>
-    <app-leave-a-comment [name]="title"/>
-  
+    <app-leave-a-comment [name]="title" />
+
+
   </ion-toolbar>
 
 </ion-header>

@@ -3,6 +3,8 @@ import { IonHeader, IonToolbar, IonTitle, IonButton, IonButtons, IonIcon } from 
 import { LeaveACommentComponent } from '../shared/leave-a-comment/leave-a-comment.component';
 import { TranslocoModule } from '@jsverse/transloco';
 import { TranslocoRootModule } from 'src/app/transloco-root.module';
+import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-toolbar',
@@ -15,7 +17,7 @@ import { TranslocoRootModule } from 'src/app/transloco-root.module';
 export class ToolbarComponent  implements OnInit {
   @Input() title: string = "";
 
-  constructor() {
+  constructor(public router : Router, public navController: NavController) {
    
    }
 
@@ -23,4 +25,7 @@ export class ToolbarComponent  implements OnInit {
    
   }
 
+  goToHistory(){
+    this.navController.navigateForward('history');
+  }
 }
