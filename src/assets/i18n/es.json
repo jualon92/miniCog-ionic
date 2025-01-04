@@ -63,7 +63,7 @@
     "DRAW_HOUR": "Cuando eso esté completo, diga: “Ahora, ponga las manecillas en las",
     "REPEAT_INFO": "Repita las instrucciones según sea necesario, ya que esto no es una prueba de memoria.",
     "UNABLE_DRAW": "Pase al paso 3 si el reloj no está completo en tres minutos.",
-    "CONTINUE": "siguiente paso."
+    "CONTINUE": "siguiente paso"
   },
   "SCORE_WORDS": {
     "TITLE": "Calificación del recuerdo de palabras",
@@ -73,7 +73,7 @@
     "PICKED_WORDS": "Lista de palabras elegidas",
     "SCORE_BASIS": "Dé 1 punto por cada palabra correcta sin pistas.",
     "HAND_INFO": "La longitud de la mano no se califica.",
-    "CONTINUE": "Siguiente paso."
+    "CONTINUE": "Siguiente paso"
   },
   "SCORE_CLOCK": {
     "TITLE": "Calificación del Dibujo del Reloj",
@@ -93,7 +93,8 @@
     "CLOCK_DRAWING": "Reloj 🕒",
     "TOTAL_SCORE": "Total 📈 ",
     "SCORE": "Puntuación",
-    "INTERPRETATION_LABEL": "Interpretación Puntaje total"
+    "INTERPRETATION_LABEL": "Interpretación Puntaje total",
+    "RESULT_SAVED": "Resultado guardado en historial"
   },
   "HISTORY":{
     "TITLE": "Historial",
