@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { map } from 'rxjs';
 import { StorageService } from 'src/storage/storage.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-history',
@@ -11,7 +12,7 @@ import { StorageService } from 'src/storage/storage.service';
 })
 export class HistoryPage {
   data:any;
-  constructor(public storage: StorageService, public route: ActivatedRoute) { 
+  constructor(public navController:NavController, public storage: StorageService, public route: ActivatedRoute) { 
      this.route.data.subscribe((  {data }) => {
         this.data = [...data];
       });
