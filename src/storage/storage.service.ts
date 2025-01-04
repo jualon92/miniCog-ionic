@@ -9,9 +9,9 @@ import { CLOCK_KEY, ClockPoints, HISTORY, HistorySnapshot, TIMES_DONE, WORD_KEY 
 export class StorageService {
   readonly MAX_TIMES = 2;
   private _storage: Storage | null = null;
-
+  private storageReady: Promise<void>;
   constructor(private storage: Storage) {
-    this.init();
+    this.storageReady =  this.init();
   }
 
   async init() {
@@ -41,11 +41,12 @@ export class StorageService {
     return timesDone === this.MAX_TIMES;
   }
 
-  
   removeHistoryItem(index: number){
     this.getHistory()?.then(async (history) => {
-      history.splice(index, 1);
-      await this._storage?.set(HISTORY, [...history])
+      history?.splice(index, 1);
+      if (history) {
+        await this._storage?.set(HISTORY, [...history]);
+      }
       
     });
   }
@@ -101,7 +102,9 @@ export class StorageService {
   /**
    * get the history of the user's points, sorted by date
    */
-  getHistory(){
+  async getHistory() : Promise<HistorySnapshot[] | undefined> {
+    //wait for storage to be ready
+    await this.storageReady;
     return this._storage?.get(HISTORY).then((history : HistorySnapshot[]) => {
        return history.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
     });
