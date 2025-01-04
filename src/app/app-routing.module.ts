@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-
+import { historyResolver } from './pages/history/history.resolver';
 const routes: Routes = [
   {
    path: '',
@@ -32,7 +32,10 @@ const routes: Routes = [
   },
   {
     path: 'history',
-    loadChildren: () => import('./pages/history/history.module').then( m => m.HistoryPageModule)
+    loadChildren: () => import('./pages/history/history.module').then( m => m.HistoryPageModule),
+    resolve: {
+      data: historyResolver
+    }
   }
 
 ];
