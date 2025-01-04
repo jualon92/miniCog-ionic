@@ -1,41 +1,42 @@
 {
-  "SEE_HISTORY": "See History",
-  "READ_MORE_BUTTON": "Read More About the Test",
-  "GO_BACK": "Go Back",
+  "GUESS": "Correct",
+  "POINTS": "Points",
+  "SEE_HISTORY": "History",
+  "READ_MORE_BUTTON": "Read more about the test",
   "HOME": {
-    "FAQ": "FAQ - Mini Cog",
+    "FAQ": "About - Mini Cog",
     "WHAT_IS_APP": {
       "TITLE": "What is this app?",
-      "DESCRIPTION": "This application will guide you step-by-step to administer the Mini Cog test with a loved one."
+      "DESCRIPTION": "This application will guide you step by step to perform the Mini Cog test with a loved one."
     },
     "WHAT_IS_MINICOG": {
       "TITLE": "What is the Mini Cog?",
-      "DESCRIPTION": "The Mini Cog test is a brief cognitive screening test used to detect cognitive impairment in older adults. It consists of a three-item memory recall test and a simple clock-drawing test."
+      "DESCRIPTION": "The Mini Cog test is a brief cognitive screening tool used to detect cognitive impairment in older adults. It consists of a three-item memory recall test and a simple clock-drawing test."
     },
     "WHO_IS_THIS_FOR": {
       "TITLE": "Who is this for?",
       "DESCRIPTION": "This test is designed to be administered by one person to another, such as a family member or loved one."
     },
-    "START_BUTTON": "Start"
+    "START_BUTTON": "START"
   },
   "BEFORE_WE_START": {
-    "TITLE": "Before We Start",
+    "TITLE": "Before we begin",
     "TOOLS": "Grab a pencil and paper",
-    "PERSON_ATTENTION": "Ensure the person is paying attention",
-    "EXPLAIN": "Explain that you will ask them to remember three words and draw a clock",
+    "PERSON_ATTENTION": "Make sure the person is paying attention",
+    "EXPLAIN": "Explain that you'll ask them to remember three words and draw a clock",
     "QUIET_PLACE": "Find a quiet place with no distractions",
-    "READY": "I’m ready"
+    "READY": "I'm ready"
   },
   "WORD_RECALL": {
-    "TITLE": "Recall 3 Words",
-    "DESCRIPTION": "In this part of the test, you will ask the person to remember three words. Say the words one by one and ask the person to repeat them. After saying all three words, ask them to repeat them again. If the person can recall all three words, proceed to the next part of the test.",
+    "TITLE": "Remember 3 Words",
+    "DESCRIPTION": "In this part of the test, you will ask the person to remember three words. Say the words one by one and ask the person to repeat them. After you have said all three words, ask the person to repeat them again. If the person can recall all three words, proceed to the next part of the test.",
     "REPEAT": "Repeat the words if necessary, but do not provide additional information or hints.",
-    "UNABLE_REPEAT": "If the person cannot repeat the words after three attempts, proceed to Step 2 (Clock Drawing).",
-    "CONTINUE": "Next Step",
+    "UNABLE_REPEAT": "If the person cannot repeat the words after three attempts, move to Step 2 (clock drawing).",
+    "CONTINUE": "Next step",
     "ASK_REPEAT": "After saying the three words, ask the person to repeat them.",
     "WORDS_ARE": "The words are:",
-    "LOOK": "Look at the person directly and say:",
-    "PLEASE_LISTEN": "“Please listen carefully. I’m going to say three words that I want you to repeat now and try to remember.",
+    "LOOK": "Look directly at the person and say:",
+    "PLEASE_LISTEN": "“Please listen carefully. I am going to say three words that I want you to repeat now and try to remember.",
     "WORD_SET_1": {
       "FIRST": "Banana",
       "SECOND": "Sun",
@@ -54,61 +55,62 @@
   },
   "CLOCK_DRAWING": {
     "TITLE": "Clock Drawing",
-    "DESCRIPTION": "Provide the person with a blank sheet of paper and a pen or pencil.",
-    "CIRCLE_PAPER": "It is acceptable to provide a sheet of paper with a pre-drawn circle for the person.",
-    "REQUEST": "Say: “Next, I want you to draw a clock for me. First, put all the numbers where they go.”",
+    "DESCRIPTION": "Give the person a blank piece of paper and a pen or pencil.",
+    "CIRCLE_PAPER": "It is acceptable to provide a piece of paper with a pre-drawn circle for the person.",
+    "REQUEST": "Say: “Next, I want you to draw a clock for me. First, put all the numbers where they belong.”",
     "DRAW_HOUR": "When that is complete, say: “Now, set the hands to",
-    "REPEAT_INFO": "Repeat the instructions as needed, as this is not a memory test.",
-    "UNABLE_DRAW": "Proceed to step 3 if the clock is not complete within three minutes.",
-    "CONTINUE": "Next Step"
+    "REPEAT_INFO": "Repeat instructions as needed, as this is not a memory test.",
+    "UNABLE_DRAW": "Move to Step 3 if the clock is incomplete after three minutes.",
+    "CONTINUE": "Next step"
   },
   "SCORE_WORDS": {
-    "TITLE": "Word Recall Scoring",
-    "REQUEST": "You will ask the person to recall the set of 3 words you gave at the beginning of the test.",
+    "TITLE": "Scoring Word Recall",
+    "REQUEST": "You will ask the person to recall the set of 3 words given at the beginning of the test.",
     "QUESTION": "Say: “What were the three words I asked you to remember?”",
     "WRITE_DOWN": "Write down the words the person said.",
-    "PICKED_WORDS": "Selected Words",
+    "PICKED_WORDS": "List of chosen words",
     "SCORE_BASIS": "Give 1 point for each correct word without hints.",
-    "HAND_INFO": "The length of the hand is not scored.",
-    "CONTINUE": "Next Step"
+    "HAND_INFO": "Hand length is not scored.",
+    "CONTINUE": "Next step"
   },
   "SCORE_CLOCK": {
-    "TITLE": "Clock Drawing Scoring",
-    "SCORE_BASIS": "2 points for a normal clock or 0 (zero) points for an abnormal clock drawing.",
-    "CORRECT_CLOCK": "A normal clock must include all numbers (1-12), each only once, in the correct order and direction (clockwise).",
-    "CORRECT_HANDS": "Two hands must also be present, one pointing to 11 and the other to 2.",
-    "HAND_INFO": "The length of the hand is not scored.",
-    "CONTINUE": "View Results"
+    "TITLE": "Scoring Clock Drawing",
+    "SCORE_BASIS": "2 points for a normal clock or 0 points for an abnormal clock drawing.",
+    "CORRECT_CLOCK": "A normal clock should include all numbers (1-12), each only once, in the correct order and direction (clockwise).",
+    "CORRECT_HANDS": "There should also be two hands, one pointing to 11 and the other to 2.",
+    "HAND_INFO": "Hand length is not scored.",
+    "CONTINUE": "See results"
   },
   "RESULTS": {
     "TITLE": "Results",
     "BRIEF_DESCRIPTION": "Total Score = Word Recall Score + Clock Drawing Score.",
-    "CUT_POINT": "A cutoff score of <b>less than 3</b> on the Mini-Cog™ has been validated for dementia detection, but many individuals with clinically significant cognitive impairment may score higher.",
-    "INTERPRETATION": "When higher sensitivity is desired, a cutoff score of <b>less than 4</b> is recommended, as it may indicate the need for further cognitive assessment.",
-    "CONTINUE": "Retake Test",
-    "WORD_RECALL": "Word Recall",
-    "CLOCK_DRAWING": "Clock Drawing",
-    "TOTAL_SCORE": "Total Score",
+    "CUT_POINT": "A <b>score of less than 3</b> on the Mini-Cog™ has been validated for dementia detection, but many people with significant cognitive impairment may score higher.",
+    "INTERPRETATION": "For greater sensitivity, a <b>score of less than 4</b> is recommended, as it may indicate the need for further cognitive evaluation.",
+    "CONTINUE": "Repeat",
+    "WORD_RECALL": "Words 📚",
+    "CLOCK_DRAWING": "Clock 🕒",
+    "TOTAL_SCORE": "Total 📈",
     "SCORE": "Score",
-    "INTERPRETATION_LABEL": "Interpretation"
+    "INTERPRETATION_LABEL": "Total Score Interpretation",
+    "RESULT_SAVED": "Result saved to history"
   },
-  "HISTORY":{
+  "HISTORY": {
     "TITLE": "History",
-    "WORD_RECALL":"Word Recall",
-    "CLOCK_DRAWING":"Clock Drawing",
-    "TOTAL_SCORE":"Total",
-    "DATE":"Date",
-    "DELETE":"Delete",
-    "CLEAN_DATA": "Limpiar datos",
-    "GO_BACK": "Volver",
-    "NO_DATA": "No se han cargados datos aun. Termina un test para verlo aqui"
+    "WORD_RECALL": "Words",
+    "CLOCK_DRAWING": "Clock",
+    "TOTAL_SCORE": "Total",
+    "DATE": "Date",
+    "DELETE": "Delete",
+    "CLEAN_DATA": "Clear data",
+    "GO_BACK": "Go back",
+    "NO_DATA": "No data loaded yet. Complete a test to see it here."
   },
-  "COMMENT":{
+  "COMMENT": {
     "CANCEL": "Cancel",
     "CONFIRM": "Confirm",
     "TITLE": "Leave us a comment",
-    "PLACEHOLDER": "What’s one thing you found confusing or frustrating?",
+    "PLACEHOLDER": "What did you think about the app? How can we improve it?",
     "READ_MORE": "Read more",
-    "INFO": " Your feedback is private, and will be used solely to improve the app and provide a better experience for our users."
+    "INFO": "Your opinion is private and will only be used to improve the app and provide a better experience for our users."
   }
 }
