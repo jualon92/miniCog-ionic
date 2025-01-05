@@ -112,5 +112,15 @@
     "PLACEHOLDER": "What did you think about the app? How can we improve it?",
     "READ_MORE": "Read more",
     "INFO": "Your opinion is private and will only be used to improve the app and provide a better experience for our users."
+  },
+  "DIALOGS":{
+    "USERNAME": {
+      "HEADER": "Please enter a name to identify this test",
+      "MESSAGE": "Can be anything. If blank, defaults to blank space",
+      "PLACEHOLDER": "-",
+      "NAME_INPUT": "Nickname / Name",
+      "CONTINUE": "Continue",
+      "CANCEL": "Not needed"
+    } 
   }
 }

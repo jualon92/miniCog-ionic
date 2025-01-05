@@ -114,5 +114,16 @@
     "PLACEHOLDER": " ¿Qué te pareció la aplicación? ¿Cómo podemos mejorarla?",
     "READ_MORE": "Leer más",
     "INFO": "Tu opinión es privada y se utilizará únicamente para mejorar la aplicación y proporcionar una mejor experiencia a nuestros usuarios."
+  },
+  "DIALOGS":{
+    "USERNAME": {
+      "HEADER": "Por favor ingrese un nombre para identificar esta prueba",
+      "MESSAGE": "Puede ser cualquier cosa. Si se deja en blanco, se usará un espacio en blanco",
+      "PLACEHOLDER": "-",
+      "NAME_INPUT": "Apodo / Nombre",
+      "CONTINUE": "Continuar",
+      "CANCEL": "No hace falta"
+    }
   }
+ 
 }
