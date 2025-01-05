@@ -39,16 +39,20 @@
   <ng-template pTemplate="header">
       <tr>
 <!--   <th>id</th>   -->
-          <th>{{t("HISTORY.WORD_RECALL")}}</th>
-          <th>{{t("HISTORY.CLOCK_DRAWING")}}</th>
+<th>name</th>
+        <!--   <th>{{t("HISTORY.WORD_RECALL")}}</th> -->
+           
+          <th> <ion-icon name="pencil-outline"></ion-icon> </th>
+          <th>  <ion-icon name="time-outline"></ion-icon></th>
           <th>{{t("HISTORY.TOTAL_SCORE")}}</th>
           <th>{{t("HISTORY.DATE")}}</th>
-          <th>{{t("HISTORY.DELETE")}}</th>
+          <th> {{t("HISTORY.DELETE")}} </th>
       </tr>
   </ng-template>
   <ng-template pTemplate="body" let-item let-rowIndex="rowIndex">
       <tr>
         <!-- <td>{{rowIndex}}</td>   -->
+        <td>{{item.name ?? ""}}</td>
           <td>{{item.wordPoints}}</td>
           <td>   {{ item.clockPoints }}  </td>
           <td> <b>  {{item.wordPoints + item.clockPoints}} </b></td>
