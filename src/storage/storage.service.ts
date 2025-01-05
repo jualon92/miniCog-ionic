@@ -71,6 +71,13 @@ export class StorageService {
     this._storage?.set(CLOCK_KEY, clockPoints);
   }
 
+  setName(name: string){
+    this._storage?.set('name', name);
+  }
+
+  async getName(){
+    return this._storage?.get('name') ?? "error";
+  }
   getClockPoints(): Promise<ClockPoints> | undefined{
     return this._storage?.get(CLOCK_KEY);
   }
@@ -86,11 +93,13 @@ export class StorageService {
     const state : HistorySnapshot = {
       wordPoints: await this.getWordPoints(),
       clockPoints: await this.getClockPoints(),
-      date: new Date()
+      date: new Date(),
+      name: await this.getName()
     }
     this.addToArray(HISTORY, state);
   }
 
+  
   async addToArray(key: string, element: HistorySnapshot) {
     let currentArray = await this._storage?.get(key) || [];
     if (!Array.isArray(currentArray)) {

@@ -9,4 +9,5 @@ export interface HistorySnapshot {
   wordPoints: number;
   clockPoints: ClockPoints | undefined;
   date: string | Date;
+  name: string;
 }
