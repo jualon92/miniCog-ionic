@@ -8,6 +8,7 @@ import { BehaviorSubject, Subject } from 'rxjs';
 export class TtsService {
   private enabledSubject = new BehaviorSubject<boolean>(true);
   enabled$ = this.enabledSubject.asObservable();
+  isTtsDisabled = false;
   constructor(private transloco: TranslocoService) {}
 
   async readTranslatedKey(key: string) {
@@ -23,10 +24,10 @@ export class TtsService {
     });
   }
 
-  
+
   async readText(text: string) {
     const currentLang = this.transloco.getActiveLang();
-     
+
     const voiceLang = currentLang === 'es' ? 'es-ES' : 'en-US';
 
     await TextToSpeech.speak({
@@ -43,8 +44,15 @@ export class TtsService {
   // flip the value of enabled
   trigger(){
     this.enabledSubject.next(!this.enabledSubject.value);
+    if (!this.enabledSubject.value) {
+      TextToSpeech.stop();
+      
+    }
   }
- 
+
+  getState(){
+    return this.enabledSubject.value;
+  }
   disable(){
     this.enabledSubject.next(false);
   }
