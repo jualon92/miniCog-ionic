@@ -45,17 +45,24 @@
 
       <ng-template #mobileView> 
       <ul style="padding-left: 20px;">
-        <li>
-          <strong> {{t("HOME.WHAT_IS_APP.TITLE")}}</strong>
-          <p>{{t("HOME.WHAT_IS_APP.DESCRIPTION")}} </p>
+        <li> 
+            <ion-icon [@fadeInOut] (click)="useTts(ttsItems[0])" size="medium" *ngIf="this.tts.enabled$! | async" color="primary" style="transform: translateY(4px);" [name]="ttsItems[0].isReading ?  'volume-medium' : 'volume-medium-outline'"></ion-icon>
+            <strong id="title1"> {{t("HOME.WHAT_IS_APP.TITLE")}} </strong>
+           
+      
+          
+          <p id="p1">{{t("HOME.WHAT_IS_APP.DESCRIPTION")}} </p>
         </li>
         <li>
-          <strong> {{t("HOME.WHAT_IS_MINICOG.TITLE")}} </strong>
-          <p>{{t("HOME.WHAT_IS_MINICOG.DESCRIPTION")}}</p>
+          <ion-icon  [@fadeInOut]   (click)="useTts(ttsItems[1])" size="medium" *ngIf="this.tts.enabled$! | async" color="primary" style="transform: translateY(4px);" [name]="ttsItems[1].isReading ?  'volume-medium' : 'volume-medium-outline'"></ion-icon>
+          <strong id="title2"> {{t("HOME.WHAT_IS_MINICOG.TITLE")}} </strong>
+          <p id="p2">{{t("HOME.WHAT_IS_MINICOG.DESCRIPTION")}}</p>
         </li>
         <li>
-          <strong>{{t("HOME.WHO_IS_THIS_FOR.TITLE")}}</strong>
-          <p>{{t("HOME.WHO_IS_THIS_FOR.DESCRIPTION")}}</p>
+          <ion-icon  [@fadeInOut]  (click)="useTts(ttsItems[2])" size="medium" *ngIf="this.tts.enabled$! | async" color="primary" style="transform: translateY(4px);" [name]="ttsItems[2].isReading ?  'volume-medium' : 'volume-medium-outline'"></ion-icon>
+        
+          <strong  id="title3">{{t("HOME.WHO_IS_THIS_FOR.TITLE")}}</strong>
+          <p id="p3">{{t("HOME.WHO_IS_THIS_FOR.DESCRIPTION")}}</p>
         </li>
       </ul>
       <div class="ion-text-center">
