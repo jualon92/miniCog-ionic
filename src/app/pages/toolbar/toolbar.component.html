@@ -1,29 +1,29 @@
 <ion-header [translucent]="true" *transloco="let t">
   <ion-toolbar>
-    <ion-title>{{title}} 
-      <ion-icon 
-      size="medium" 
+    <ion-title>{{title}}
+      <ion-icon
+      size="medium"
       [color]="(loudspeakerIsActive$ | async) ? 'primary' : 'unset'"
       [name]="(loudspeakerIsActive$ | async) ? 'volume-high-outline' : 'volume-mute-outline'"
-      (click)="useTts()"   
+      (click)="useTts()"
       style="transform: translateY(3px);"
       [title]="(loudspeakerIsActive$ | async) ? 'Desactivar audio' : 'Activar audio'">
     </ion-icon>
-       
-     
-    </ion-title>
-      
-     
 
-    
+
+    </ion-title>
+
+
+
+
     <ion-buttons slot="end">
-     
+
       <ion-button   (click)="goToHistory()" expand="block">
         <ion-icon slot="icon-only" name="clipboard-outline" [color]="timesVisited > 0 ? 'primary' : 'unset'"></ion-icon>
       </ion-button>
       <ion-button [id]="title" expand="block">
         <ion-icon slot="icon-only" name="chatbubble-ellipses-outline"></ion-icon>
-       
+
       </ion-button>
 
     </ion-buttons>
@@ -32,4 +32,11 @@
 
   </ion-toolbar>
 
+  <ion-toast (didDismiss)="isTtsEnabled = false " [isOpen]="isTtsEnabled" color="success" [message]="t('TTS.ENABLED')" [duration]="2000"></ion-toast>
+<ion-toast (didDismiss)="isTtsDisabled = false " [isOpen]="isTtsDisabled" color="warning" [message]="t('TTS.DISABLED')" [duration]="2000"></ion-toast>
+
+
 </ion-header>
+
+
+ 
