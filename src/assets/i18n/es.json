@@ -125,6 +125,10 @@
       "CONTINUE": "Continuar",
       "CANCEL": "No hace falta"
     }
+  },
+  "TTS":{
+    "ENABLED": "Habilitado voz a texto",
+    "DISABLED": "Deshabilitado voz a texto"
   }
  
 }

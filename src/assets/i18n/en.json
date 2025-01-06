@@ -123,5 +123,9 @@
       "CONTINUE": "Continue",
       "CANCEL": "Not needed"
     } 
+  },
+  "TTS":{
+    "ENABLED": "Text-to-speech enabled",
+    "DISABLED": "Text-to-speech disabled"
   }
 }
