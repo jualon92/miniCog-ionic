@@ -1,3 +1,4 @@
+import { TextToSpeech } from '@capacitor-community/text-to-speech';
 import { Component, Input, input, OnInit } from '@angular/core';
 import { IonHeader, IonToolbar, IonTitle, IonButton, IonButtons, IonIcon } from "@ionic/angular/standalone";
 import { LeaveACommentComponent } from '../shared/leave-a-comment/leave-a-comment.component';
@@ -6,20 +7,24 @@ import { TranslocoRootModule } from 'src/app/transloco-root.module';
 import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { StorageService } from 'src/storage/storage.service';
+import { TtsService } from 'src/app/components/about/tts.service';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.scss'],
   standalone: true,
-  imports: [TranslocoRootModule, IonButtons, IonHeader, IonToolbar, IonIcon, IonTitle, IonButton, LeaveACommentComponent],
+  imports: [AsyncPipe,  TranslocoRootModule, IonButtons, IonHeader, IonToolbar, IonIcon, IonTitle, IonButton, LeaveACommentComponent],
   
 })
 export class ToolbarComponent  implements OnInit {
   @Input() title: string = "";
+  loudspeakerColor = "unset";
+  loudspeakerIsActive$ = this.tts.enabled$;
   timesVisited: any = 0; 
-  constructor(public storage: StorageService, public router : Router, public navController: NavController) {
-
+  constructor(public tts: TtsService, public storage: StorageService, public router : Router, public navController: NavController) {
+ 
    }
 
   async ngOnInit() {
@@ -32,6 +37,13 @@ export class ToolbarComponent  implements OnInit {
    
   } 
 
+  useTts(){
+    this.tts.trigger();
+   
+  
+
+ 
+  }
   goToHistory(){
     this.navController.navigateForward('history');
   }
