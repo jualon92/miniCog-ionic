@@ -100,6 +100,7 @@
     "TITLE": "Historial",
     "WORD_RECALL":"Palabras",
     "CLOCK_DRAWING":"Reloj",
+    "NAME":"Nombre",
     "TOTAL_SCORE":"Total",
     "DATE":"Fecha",
     "DELETE":"Eliminar",
@@ -118,7 +119,7 @@
   "DIALOGS":{
     "USERNAME": {
       "HEADER": "Por favor ingrese un nombre para identificar esta prueba",
-      "MESSAGE": "Puede ser cualquier cosa. Si se deja en blanco, se usará un espacio en blanco",
+      "MESSAGE": "Puede ser cualquier cosa. ",
       "PLACEHOLDER": "-",
       "NAME_INPUT": "Apodo / Nombre",
       "CONTINUE": "Continuar",

@@ -99,6 +99,7 @@
     "WORD_RECALL": "Words",
     "CLOCK_DRAWING": "Clock",
     "TOTAL_SCORE": "Total",
+    "NAME": "Name",
     "DATE": "Date",
     "DELETE": "Delete",
     "CLEAN_DATA": "Clear data",
@@ -116,7 +117,7 @@
   "DIALOGS":{
     "USERNAME": {
       "HEADER": "Please enter a name to identify this test",
-      "MESSAGE": "Can be anything. If blank, defaults to blank space",
+      "MESSAGE": "Can be anything.",
       "PLACEHOLDER": "-",
       "NAME_INPUT": "Nickname / Name",
       "CONTINUE": "Continue",
