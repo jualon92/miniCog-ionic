@@ -41,7 +41,7 @@ export class ToolbarComponent  implements OnInit {
 
   useTts(){
     this.tts.trigger();
-    if (this.tts.getState()){
+    if (!this.tts.getState()){
       this.isTtsDisabled = true;
     }else{
       this.isTtsEnabled =  true;
