@@ -24,6 +24,9 @@ export class TtsService {
     });
   }
 
+  cancel(){
+    TextToSpeech.stop();
+  }
 
   async readText(text: string) {
     const currentLang = this.transloco.getActiveLang();

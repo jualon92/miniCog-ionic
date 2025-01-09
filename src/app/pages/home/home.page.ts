@@ -98,7 +98,14 @@ export class HomePage implements  AfterViewInit, OnInit {
   }
 
   async useTts(ttsItem: TtsItem) {
-      ttsItem.isReading = !ttsItem.isReading
+    if (ttsItem.isReading){
+      // Cancelar lectura
+      this.tts.cancel();
+      return;
+    } 
+    
+    ttsItem.isReading = !ttsItem.isReading
+      
     try {
   
       // Esperar que todas las lecturas terminen
