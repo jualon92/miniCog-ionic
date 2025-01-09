@@ -1,12 +1,13 @@
 {
   "name": "Mini-cog test",
   "short_name": "Mini cog",
+  "id": "com.minicogtest",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
-  "display": "minimal-ui",
-  "orientation": "portrait",
-  "lang": "en",
+  "display": "standalone",
+  "orientation": "portrait", 
   "scope": "./",
+  "dir": "ltr",
   "start_url": "./",
   "description": "Quick screening for early dementia detection",
   "icons": [
@@ -47,5 +48,14 @@
           "sizes": "384x845",
           "type": "image/webp"
       }
-  ]
+  ],
+  "display_override": [
+    "standalone",
+    "fullscreen",
+    "window-controls-overlay"
+  ],
+  "edge_side_panel": {
+    "preferred_width": 480
+  },
+  "prefer_related_applications": false
 }
